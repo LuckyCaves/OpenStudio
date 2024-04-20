@@ -1,7 +1,7 @@
 
 .hero{
     height: 100vh;
-    background-image: url(../images/hero.png);
+    background-image:linear-gradient(transparent, white), url(../images/hero.png);
     background-size: cover;
     background-position: center;
     display: flex;
