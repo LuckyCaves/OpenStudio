@@ -3,18 +3,11 @@
   font-family: 'Inter', 'Lato', sans-serif;
 }
 
-body
-{
-  /* padding-left: 2rem; */
-  /* padding-right: 2rem; */
-}
-
 .navbar{
   padding-left: 5rem;
   padding-right: 5rem;
   height: 10vh; /*Cambio Isaac */
   background-color: transparent; /*Cambio Isaac */
-  position: absolute; /*Cambio Isaac */
   width: 100%; /*Cambio Isaac */
   z-index: 1000; /*Cambio Isaac */
 }
@@ -125,4 +118,20 @@ body
   text-decoration: none;
   border: none;
   background-color: transparent;
+}
+
+footer
+{
+  margin-bottom: 0;
+  height: 12vh;
+  font-size: small;
+  padding: 2rem;
+  background-color: rgb(43, 43, 43);
+  color: white;
+}
+
+footer a
+{
+  color: white;
+  text-decoration: none;
 }
