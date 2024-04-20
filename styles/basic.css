@@ -3,6 +3,17 @@
   font-family: 'Inter', 'Lato', sans-serif;
 }
 
+body
+{
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.container-fluid
+{
+  padding-left: 0;
+}
+
 .nav-link
 {
   margin-right: 0.75rem;
@@ -91,7 +102,6 @@
 
 #user-btn:hover, #cart-btn:hover
 {
-  /* box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4); */
   transition: letter-spacing 0.5s ease;
   letter-spacing: 1px;
 }
