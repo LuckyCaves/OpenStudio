@@ -21,6 +21,9 @@
         <link rel="stylesheet" href="../styles/basic.css">
         <link rel="stylesheet" href="../styles/home.css">
 
+        <!-- Hojas de Estilos Adicionales -->
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+
         <!-- Controladores -->
         <script src="../controllers/"></script>
 
@@ -57,11 +60,11 @@
                                     <span id="line">Sell</span>
                                 </a>
                             </li>
-                            <li class="nav-item">
-                                <a id="user-btn" class="nav-link" href="" role="button">
-                                <span id="line">Login</span>
-                                </a>
-                            </li>
+                                <li class="nav-item">
+                                    <a id="user-btn" class="nav-link" href="#" role="button" data-bs-toggle="modal" data-bs-target="#modalId">
+                                        <span id="line">Login</span>
+                                    </a>
+                                </li>
                             <li class="nav-item">
                                 <a id="cart-btn" class="nav-link" href="" role="button">
                                     <span id="line">Cart</span>
@@ -110,6 +113,126 @@
                     </div>
                 </div>
             </section>
+
+            <section class="curators-picks">
+                <div class="container">
+                  <h3 class="section-title">Curators Picks</h3>
+                  <!-- Swiper -->
+                  <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                      <!-- Slides -->
+                      <div class="swiper-slide">
+                        <div class="card"></div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="card"></div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="card"></div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="card"></div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="card"></div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="card"></div>
+                      </div>
+                      <!-- ... additional slides -->
+                    </div>
+                  </div>
+                </div>
+              </section>
+              
+            
+              <section class="contact-section">
+                <div class="container text-center">
+                  <h2>Contact Our Team</h2>
+                  <p class="contact-message">Get in Touch.</p>
+                  <div class="row">
+                    <div class="col d-flex justify-content-between footer">
+                      <span>© Open Studio 2024</span>
+                      <div>
+                        <a href="#" class="me-3">Privacy Policy</a>
+                        <a href="#">Instagram</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              
+               <!--Login Modal-->
+                <div class="modal fade" id="modalId" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false"
+                    role="dialog" aria-labelledby="Login" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="Login">Log in</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">   
+                                <label for="input_user">Email</label>
+                                <div class="input-group mb-3" style="margin-top: 5px;">
+                                    <input type="email" id="input_user" required class="form-control">
+                                
+                                </div>
+                    
+                                <label for="input_password">Password</label>
+                                <div class="input-group mb-3" style="margin-top: 5px;">
+                                    <input type="password" id="input_password" required class="form-control">
+                    
+                                </div>
+
+                                <div style="text-align: center;">
+                                    <button type="submit" class="btn btn-primary">Login</button>
+                                </div>
+                            </div>
+                            <div class="modal-footer d-flex justify-content-center align-items-center">
+                                <div class="text-center">
+                                    <span>Don't have an account?</span><br>
+                                    <button type="button" class="btn btn-primary btn-signup" data-bs-toggle="modal" data-bs-target="#Register">Sign Up</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sign Up Modal -->
+            <div class="modal fade" id="Register" tabindex="-1" aria-labelledby="RegisterLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="RegisterLabel">Sign Up</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="mb-3">
+                                    <label for="registerName" class="form-label">Full Name</label>
+                                    <input type="name" class="form-control" id="registerName" aria-describedby="registerName">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="registerEmail" class="form-label">Email address</label>
+                                    <input type="email" class="form-control" id="registerEmail" aria-describedby="emailHelp">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="registerPassword" class="form-label">Password</label>
+                                    <input type="password" class="form-control" id="registerPassword">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="registerConfirmPassword" class="form-label">Confirm Password</label>
+                                    <input type="password" class="form-control" id="registerConfirmPassword">
+                                </div>
+                                <div class="button-container">
+                                    <button type="submit" class="btn btn-primary btn-submit">Submit</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             
         </main>
         <!-- Bootstrap JavaScript Libraries -->
@@ -124,5 +247,28 @@
             integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
             crossorigin="anonymous"
         ></script>
+
+        <!-- Swiper's JS -->
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+
+        <script>
+            var swiper = new Swiper('.mySwiper', {
+              slidesPerView: 3,
+              spaceBetween: 30,
+              slidesPerGroup: 3,
+              loop: true,
+              loopFillGroupWithBlank: true,
+              pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+              },
+              navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+              },
+            });
+          </script>
+          
     </body>
 </html>
