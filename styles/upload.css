@@ -1,0 +1,26 @@
+.nav-tabs {
+    border: none;
+    padding: none;
+}
+
+.nav-tabs .nav-link {
+    border: none;
+    box-shadow: none;
+    border-bottom: 2px solid lightgrey;
+    margin-right: 0px;
+    color: grey;
+    text-align: left;
+}
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    border-color: black;
+}
+
+.marker{
+    float: right;
+}
+
+.btn-black {
+    background-color: black;
+    color: white;
+}
