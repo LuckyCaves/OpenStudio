@@ -1,3 +1,6 @@
+*{
+    font-family: 'Inter', 'Lato', sans-serif;
+}
 
 .hero{
     height: 100vh;
@@ -12,3 +15,81 @@
     padding-bottom: 10rem;
 }
 
+.navbar{
+    height: 15vh;
+    position: absolute;
+}
+
+#info-btn::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: calc(100% + 4px);
+    height: calc(100% - -2px);
+    background-color: #9ad4c4;
+    transition: 0.3s ease-out;
+    transform: scaleY(1);
+  }
+
+.title h2{
+    font-size: 5vh;
+    padding-left: 5rem;
+}
+
+
+/*--- Search---*/
+
+.custom-search {
+    box-shadow: 0 0 10px #bba5db;
+    font-size: 3vh;
+    text-indent: 3vh;
+    border-radius: 5vh;
+    height: 8vh;
+}
+
+.custom-search::placeholder {
+    font-size: 3vh;
+    text-indent: 3vh;
+}
+
+.custom-search::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+
+.custom-search:focus {
+    outline: none;          
+    box-shadow: 0 0 30px #bba5db;;
+    border: none;       
+}
+
+/*--- Featured---*/
+
+.featured-section {
+    height: 100vh;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.featured-title {
+    text-align: left;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+}
+
+.card {
+    border: 1px solid #ccc;
+    height: 280px; 
+    background-color: #f8f9fa; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
