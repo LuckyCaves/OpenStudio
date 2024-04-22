@@ -31,13 +31,50 @@
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/50b8111978.js" crossorigin="anonymous"></script>
 
+        <!--Login Modal-->
+        <div class="modal fade" id="modalId" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false"
+        role="dialog" aria-labelledby="Login" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="Login">Log in</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">   
+                        <label for="input_user">Email</label>
+                        <div class="input-group mb-3" style="margin-top: 5px;">
+                            <input type="email" id="input_user" required class="form-control">
+                        
+                        </div>
+
+                        <label for="input_password">Password</label>
+                        <div class="input-group mb-3" style="margin-top: 5px;">
+                            <input type="password" id="input_password" required class="form-control">
+
+                        </div>
+                        <div style="text-align: center;">
+                            <button type="submit" class="btn btn-primary">Login</button>
+                        </div>
+                    </div>
+                    <div class="modal-footer d-flex justify-content-center align-items-center">
+                        <div class="text-center">
+                            <span>Don't have an account?</span><br>
+                            <button type="button" class="btn btn-primary btn-signup" data-bs-toggle="modal" data-bs-target="#Register">Sign Up</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
     </head>
 
     <body>
         <header>
             <nav id="navbar" class="navbar navbar-expand-sm">
 				<div class="container-fluid">
-					<a class="navbar-brand" href="#">
+					<a class="navbar-brand" href="home.html">
                         <span id="logo">
                             OPEN STUDIO
                         </span>
@@ -48,22 +85,22 @@
                     <div class="collapse navbar-collapse" id="navbarRight">
                         <ul class="navbar-nav ms-auto d-flex" id="navbarRightSide">
                             <li class="nav-item">
-                                <a id="info-btn" class="nav-link" href="" role="button">
+                                <a id="info-btn" class="nav-link" href="art_collection.html" role="button">
                                     <span id="line">Buy</span>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a id="info-btn" class="nav-link" href="" role="button">
+                                <a id="info-btn" class="nav-link" href="upload.html" role="button">
                                     <span id="line">Sell</span>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a id="user-btn" class="nav-link" href="" role="button">
+                                <a id="user-btn" class="nav-link" href="#" role="button" data-bs-toggle="modal" data-bs-target="#modalId">
                                 <span id="line">Login</span>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a id="cart-btn" class="nav-link" href="" role="button">
+                                <a id="cart-btn" class="nav-link" href="cart.html" role="button">
                                     <span id="line">Cart</span>
                                 </a>
                             </li>

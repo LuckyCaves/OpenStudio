@@ -34,11 +34,11 @@
     height: calc(100vh - 37vh);
 }
 
-a {
+#back-btn {
     text-decoration: none;
     color: grey;
 }
 
-a:hover {
+#back-btn:hover {
     text-decoration: underline;
 }
