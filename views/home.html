@@ -40,7 +40,7 @@
         <header>
             <nav id="navbar" class="navbar navbar-expand-sm">
 				<div class="container-fluid">
-					<a class="navbar-brand" href="#">
+					<a class="navbar-brand" href="home.html">
                         <span id="logo">
                             OPEN STUDIO
                         </span>
@@ -51,12 +51,12 @@
                     <div class="collapse navbar-collapse" id="navbarRight">
                         <ul class="navbar-nav ms-auto d-flex" id="navbarRightSide">
                             <li class="nav-item">
-                                <a id="info-btn" class="nav-link" href="" role="button">
+                                <a id="info-btn" class="nav-link" href="art_collection.html" role="button">
                                     <span id="line">Buy</span>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a id="info-btn" class="nav-link" href="" role="button">
+                                <a id="info-btn" class="nav-link" href="upload.html" role="button">
                                     <span id="line">Sell</span>
                                 </a>
                             </li>
@@ -66,7 +66,7 @@
                                     </a>
                                 </li>
                             <li class="nav-item">
-                                <a id="cart-btn" class="nav-link" href="" role="button">
+                                <a id="cart-btn" class="nav-link" href="cart.html" role="button">
                                     <span id="line">Cart</span>
                                 </a>
                             </li>
@@ -93,27 +93,38 @@
                     <h3 class="featured-title">Featured</h3>
                     <div class="row">
                         <div class="col-lg-4 col-md-6 mb-4">
-                            <div class="card"></div>
+                            <div class="card featured1">
+                                <h2> Fantastical Landscapes</h2>
+                            </div>
                         </div>
                         <div class="col-lg-4 col-md-6 mb-4">
-                            <div class="card"></div>
+                            <div class="card featured2">
+                                <h2> Monochromatic Figuration </h2>
+                            </div>
                         </div>
                         <div class="col-lg-4 col-md-6 mb-4">
-                            <div class="card"></div>
+                            <div class="card featured3">
+                                <h2> Contemporary Cubism </h2>
+                            </div>
                         </div>
                         <div class="col-lg-4 col-md-6 mb-4">
-                            <div class="card"></div>
+                            <div class="card featured4">
+                                <h2> Monochromatic Figuration </h2>
+                            </div>
                         </div>
                         <div class="col-lg-4 col-md-6 mb-4">
-                            <div class="card"></div>
+                            <div class="card featured5">
+                                <h2> Natural Abstracticion </h2>
+                            </div>
                         </div>
                         <div class="col-lg-4 col-md-6 mb-4">
-                            <div class="card"></div>
+                            <div class="card featured6">
+                                <h2> Contemporary Impressionism </h2>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
-
             <section class="curators-picks">
                 <div class="container">
                   <h3 class="section-title">Curators Picks</h3>
@@ -122,34 +133,36 @@
                     <div class="swiper-wrapper">
                       <!-- Slides -->
                       <div class="swiper-slide">
-                        <div class="card"></div>
+                        <div class="card curated1"></div>
                       </div>
                       <div class="swiper-slide">
-                        <div class="card"></div>
+                        <div class="card curated2"></div>
                       </div>
                       <div class="swiper-slide">
-                        <div class="card"></div>
+                        <div class="card curated3"></div>
                       </div>
                       <div class="swiper-slide">
-                        <div class="card"></div>
+                        <div class="card curated4"></div>
                       </div>
                       <div class="swiper-slide">
-                        <div class="card"></div>
+                        <div class="card curated5"></div>
                       </div>
-                      <div class="swiper-slide">
-                        <div class="card"></div>
-                      </div>
-                      <!-- ... additional slides -->
+                      <!-- Additional slides -->
                     </div>
+                    <!-- Swiper Scrollbar -->
+                    <div class="swiper-scrollbar"></div>
                   </div>
                 </div>
               </section>
+    
               
             
               <section class="contact-section">
                 <div class="container text-center">
+                <div class="contact-section-text">
                   <h2>Contact Our Team</h2>
-                  <p class="contact-message">Get in Touch.</p>
+                  <p class="contact-message"><a href="mailto:openstudio@gmail.com">Get in Touch.</a></p>
+                </div>
                   <div class="row">
                     <div class="col d-flex justify-content-between footer">
                       <span>© Open Studio 2024</span>
@@ -262,6 +275,10 @@
               pagination: {
                 el: '.swiper-pagination',
                 clickable: true,
+              },
+              scrollbar: {
+                el: '.swiper-scrollbar',
+                draggable: true,
               },
               navigation: {
                 nextEl: '.swiper-button-next',
