@@ -24,3 +24,8 @@
     background-color: black;
     color: white;
 }
+
+.tab-pane {
+    height: calc(100vh - 22vh);
+}
+
