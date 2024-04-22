@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Shopping Cart</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+
+        <!-- Bootstrap CSS v5.2.1 -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+            crossorigin="anonymous"
+        />
+        <!-- Stylsheets-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <link rel="stylesheet" href="../styles/cart.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="back-button">
+            <a href="javascript:history.back()" class="btn">
+                <i class="fas fa-chevron-left"></i> Back
+            </a>
+            </div>
+            <h2 class="mb-4">Shopping Cart</h2>
+            <div class="row">
+                <div class="col-md-9">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col"></th>
+                                <th scope="col"></th>
+                                <th scope="col"></th>
+                                <th scope="col"></th>
+                                <th scope="col"></th>
+                            </tr>
+                        </thead>
+                        <tbody id="cartItems">
+                            <!-- Product 1 -->
+                            <tr>
+                                <td><img src="../images/image1.png" alt="Product 1" class="img"></td>
+                                <td class="top-aligned">
+                                    <div class = "product-info">
+                                    <h4>Joan Mitchell</h4> <h5>City Landscape</h5>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="input-group quantity-control">
+                                        <button class="btn btn-outline-secondary" type="button">-</button>
+                                        <input type="text" class="form-control" value="2">
+                                        <button class="btn btn-outline-secondary" type="button">+</button>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="price">$850</div>
+                                </td>
+                                <td>
+                                    <button class="btn btn-danger">
+                                        <i class="fas fa-times"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                             <!-- Product 2 -->
+                             <tr>
+                                <td><img src="../images/image2.png" alt="Product 1" class="img"></td>
+                                <td class="top-aligned">
+                                    <div class = "product-info">
+                                    <h4>Willem de Kooning</h4> <h5>Untitled IV</h5>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="input-group quantity-control">
+                                        <button class="btn btn-outline-secondary" type="button">-</button>
+                                        <input type="text" class="form-control" value="1">
+                                        <button class="btn btn-outline-secondary" type="button">+</button>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="price">$750</div>
+                                </td>
+                                <td>
+                                    <button class="btn btn-danger">
+                                        <i class="fas fa-times"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-md-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">Total</h4>
+                            <p> <span id="cartTotal">$0.00</span></p>
+                            <button class="btn btn-primary w-100">Checkout</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+    <!--- Other Scripts --->
+    <script
+         src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+         crossorigin="anonymous" 
+     ></script>
+     <script
+         src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+         integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+         crossorigin="anonymous"
+     ></script>
+     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+     <script src="https://kit.fontawesome.com/f51cd6edf5.js" crossorigin="anonymous"></script>
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    </body>
+</html>
