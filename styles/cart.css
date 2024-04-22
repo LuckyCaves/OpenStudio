@@ -1,0 +1,157 @@
+*
+{
+  font-family: 'Inter', 'Lato', sans-serif;
+}
+
+body {
+    margin-left: 8px;
+    padding-top: 40px;
+}
+
+.back-button .btn{
+    background-color: white;
+    color: grey;
+    border: none;
+    font-size: 3vh;
+}
+
+h2{
+    padding-top: 40px;
+}
+
+.card{
+    margin-top: 24px;
+    padding-left: 20px;
+    border: 2px solid black;
+}
+
+.card h4{
+    font-size: 3vh;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.card p{
+    font-size: 3vh;
+    padding-bottom: 10px;
+}
+
+.card .btn-primary{
+    margin-bottom: 30px;
+    background-color: black;
+    border: 2px solid black;
+    border-radius: 2vh;
+}
+
+.card .btn-primary:hover{
+    background-color: white;
+    color: black;
+}
+.card .btn-primary:active{
+    background-color: white;
+    color: black;
+    border: 2px solid black !important;
+}
+
+
+.table img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    border-radius: 10px;
+}
+
+.table {
+    border-spacing: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.table td {
+    text-align: center; 
+    vertical-align: middle; 
+    width: 150px;
+    height: 150px;
+}
+
+
+.table td.top-aligned {
+    vertical-align: top;
+    text-align: left;
+}
+
+
+.product-info h5{
+    color: grey;
+}
+
+.quantity-control {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    width: 100%; 
+}
+
+.quantity-control btn{
+    border: none;
+}
+
+.quantity-control .btn {
+    color: black;
+    background-color: #fff; 
+    border: 2px solid black; 
+    border-radius: 10px;
+    padding: .375rem .75rem;
+}
+
+.quantity-control .form-control {
+    text-align: center;
+    max-width: 3rem; 
+    border-radius: 0; 
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    height: calc(1.5em + .75rem + 4px);
+    display: inline; 
+}
+
+.quantity-control .input-group-text {
+    border-radius: 0;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    padding: .375rem .75rem;
+}
+
+.quantity-control button:first-child {
+    border-right: 0; 
+}
+
+.quantity-control button:last-child {
+    border-left: 0; 
+}
+
+.price {
+    font-size: 3vh;
+}
+
+.btn-danger {
+    background-color: black;
+    border: 2px solid black;
+}
+
+.btn-danger:hover {
+    background-color: black;
+    border: 2px solid black;
+}
+
+.btn-danger:active {
+    background-color: white !important;
+    color: black !important;
+    border: 2px solid black !important;
+}
+
+.table, .table th, .table td {
+    border: none;
+}
+

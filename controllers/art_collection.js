@@ -6,7 +6,8 @@ function createProductCard(productsContainer)
 
     let cardImage = document.createElement('img');
     cardImage.id = 'Card-Image';
-    cardImage.src = '../images/gray-default-image.jpg';
+    let imageNumber = getRandomInt(5) - 4;
+    cardImage.src = '../images/image' + Math.floor(imageNumber) + '.png';
     let blockSize = getRandomInt(15);
     cardImage.style.blockSize = blockSize + 'em';
 
