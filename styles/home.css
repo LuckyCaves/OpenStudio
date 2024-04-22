@@ -89,15 +89,54 @@ body{
 .card {
     border: none;
     height: 280px; 
-    background-color: #f8f9fa; 
+    background-color: #000000; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
+    justify-content: flex-end;
 }
 
 .card:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
+
+.featured-section h2{
+    padding: 50px 50px 30px 50px;
+    color: white;
+    text-align: left;
+}
+
+.featured1 {
+    background-image: url("../images/image1.png");
+    background-size: cover;
+}
+
+.featured2 {
+    background-image: url("../images/image2.png");
+    background-size: cover;
+}
+
+.featured3 {
+    background-image: url("../images/image3.png");
+    background-size: cover;
+}
+
+.featured4 {
+    background-image: url("../images/image4.png");
+    background-size: cover;
+}
+
+.featured5 {
+    background-image: url("../images/image5.png");
+    background-size: cover;
+}
+
+.featured6 {
+    background-image: url("../images/image6.png");
+    background-size: cover;
+}
+
+
 
 
 /*--- Curated and Footer--*/
@@ -151,6 +190,13 @@ hr {
     margin-bottom: 120px;
 }
 
+.contact-section-text a{
+    text-decoration: none;
+    color: gray;
+}
+
+
+
 .contact-section h2{
     text-align: left;
     font-size: 8vh;
@@ -168,6 +214,35 @@ hr {
     height: 100%;
   }
 
+.curated1{
+    background-image: url("../images/image1.png");
+    background-size: cover;
+}
+
+.curated2{
+    background-image: url("../images/image2.png");
+    background-size: cover;
+}   
+
+.curated3{
+    background-image: url("../images/image3.png");
+    background-size: cover;
+}
+
+.curated4{
+    background-image: url("../images/image4.png");
+    background-size: cover;
+}
+
+.curated5{
+    background-image: url("../images/image5.png");
+    background-size: cover;
+}
+
+.curated6{
+    background-image: url("../images/image6.png");
+    background-size: cover;
+}
 
   /* --- Modals --- */
 
@@ -185,6 +260,12 @@ hr {
     background-color: black;
     border: none !important;
     z-index: 1;
+}
+
+.btn-primary:hover {
+    border: 1px solid black !important;
+    background-color: white !important;
+    color: black;
 }
 
 .btn-signup{
