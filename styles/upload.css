@@ -23,9 +23,22 @@
 .btn-black {
     background-color: black;
     color: white;
+    border: 2px solid black;
 }
 
-.tab-pane {
-    height: calc(100vh - 22vh);
+.btn-black:hover {
+    border: 2px solid black;
 }
 
+.m-container {
+    height: calc(100vh - 37vh);
+}
+
+a {
+    text-decoration: none;
+    color: grey;
+}
+
+a:hover {
+    text-decoration: underline;
+}

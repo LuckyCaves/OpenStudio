@@ -72,8 +72,10 @@
 				</div>
 			</nav> 
         </header>
+
         <main>
             <div class="container mt-4">
+                <h4 class="mb-4"><a href="">&lt; Back</a></h2>
                 <nav>
                 <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
                     <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Contact Information <span class="marker">></span></button>
@@ -84,88 +86,94 @@
                 <div class="tab-content" id="nav-tabContent">
                     <div class="tab-pane fade mt-4 mb-4 show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
                         <form>
-                            <div class="mb-3">
-                                <input type="text" class="form-control" id="name" placeholder="Complete Name">
-                            </div>
+                            <div class="m-container d-flex flex-column">
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" id="name" placeholder="Complete Name">
+                                </div>
 
-                            <div class="mb-3">
-                                <input type="email" class="form-control" id="email" placeholder="Email">
-                            </div>
-                            
-                            <div class="mb-3 form-check">
-                                <input type="checkbox" class="form-check-input" id="check">
-                                <label class="form-check-label" for="exampleCheck1">I allow this information to be publicly available to anyone interested on my products</label>
-                            </div>
+                                <div class="mb-3">
+                                    <input type="email" class="form-control" id="email" placeholder="Email">
+                                </div>
+                                
+                                <div class="mb-3 form-check">
+                                    <input type="checkbox" class="form-check-input" id="check">
+                                    <label class="form-check-label" for="exampleCheck1">I allow this information to be publicly available to anyone interested on my products</label>
+                                </div>
 
-                            <div class="mt-auto">
-                                <button type="submit" class="btn btn-black">Save and continue</button>
+                                <div class="mt-auto">
+                                    <button type="submit" class="btn btn-black">Save and continue</button>
+                                </div>
                             </div>
                         </form>
                     </div>
                     <div class="tab-pane fade mt-4 mb-4" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0">
                         <form>
-                            <div class="mb-3">
-                                <input type="text" class="form-control" id="title" placeholder="Title">
-                            </div>
-
-                            <div class="mb-3">
-                                <input type="text" class="form-control" id="year" placeholder="Artwork Year">
-                            </div>
-                            
-                            <div class="row"> 
-                                <div class="mb-3 col-md-6">
-                                    <select class="form-select ">
-                                        <option selected>Category</option>
-                                        <option value="1">One</option>
-                                        <option value="2">Two</option>
-                                        <option value="3">Three</option>
-                                      </select>
+                            <div class="m-container d-flex flex-column">
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" id="title" placeholder="Title">
                                 </div>
 
-                                <div class="mb-3 col-md-6">
-                                    <select class="form-select ">
-                                        <option selected>Media</option>
-                                        <option value="1">One</option>
-                                        <option value="2">Two</option>
-                                        <option value="3">Three</option>
-                                      </select>
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" id="year" placeholder="Artwork Year">
+                                </div>
+                                
+                                <div class="row"> 
+                                    <div class="mb-3 col-md-6">
+                                        <select class="form-select ">
+                                            <option selected>Category</option>
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="mb-3 col-md-6">
+                                        <select class="form-select ">
+                                            <option selected>Media</option>
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="row"> 
+                                    <div class="mb-3 col-md-6">
+                                        <input type="text" class="form-control" id="height" placeholder="Height">
+                                    </div>
+
+                                    <div class="mb-3 col-md-6">
+                                        <input type="text" class="form-control" id="width" placeholder="Width">
+                                    </div>
+                                </div>
+
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" id="stock" placeholder="Stock">
+                                </div>
+
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" id="price" placeholder="Price">
+                                </div>
+
+
+                                <div class="mt-auto">
+                                    <button type="submit" class="btn btn-black">Save and continue</button>
                                 </div>
                             </div>
-
-                            <div class="row"> 
-                                <div class="mb-3 col-md-6">
-                                    <input type="text" class="form-control" id="height" placeholder="Height">
-                                </div>
-
-                                <div class="mb-3 col-md-6">
-                                    <input type="text" class="form-control" id="width" placeholder="Width">
-                                </div>
-                            </div>
-
-                            <div class="mb-3">
-                                <input type="text" class="form-control" id="stock" placeholder="Stock">
-                            </div>
-
-                            <div class="mb-3">
-                                <input type="text" class="form-control" id="price" placeholder="Price">
-                            </div>
-
-
-                            <div class="mt-auto">
-                                <button type="submit" class="btn btn-black">Save and continue</button>
-                            </div>
-                            
                         </form>
                     </div>
                     <div class="tab-pane fade mt-4 mb-4" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab" tabindex="0">
-                        
-                        <div class="mb-3" style="border: 2px solid black; height: 300px;">
-                                
-                        </div>
-
-                        <div class="mt-auto">
-                            <button type="submit" class="btn btn-black">Save and continue</button>
-                        </div>
+                        <form>
+                            <div class="m-container d-flex flex-column">
+                                <div class="mb-3" style="border: 2px solid black; height: 300px;">
+                                    
+                                </div>
+        
+                                <div class="mt-auto">
+                                    <button type="submit" class="btn btn-black">Save and continue</button>
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
