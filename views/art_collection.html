@@ -66,6 +66,40 @@
             </div>
         </div>
 
+        <!-- Sign Up Modal -->
+        <div class="modal fade" id="Register" tabindex="-1" aria-labelledby="RegisterLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="RegisterLabel">Sign Up</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="mb-3">
+                                <label for="registerName" class="form-label">Full Name</label>
+                                <input type="name" class="form-control" id="registerName" aria-describedby="registerName">
+                            </div>
+                            <div class="mb-3">
+                                <label for="registerEmail" class="form-label">Email address</label>
+                                <input type="email" class="form-control" id="registerEmail" aria-describedby="emailHelp">
+                            </div>
+                            <div class="mb-3">
+                                <label for="registerPassword" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="registerPassword">
+                            </div>
+                            <div class="mb-3">
+                                <label for="registerConfirmPassword" class="form-label">Confirm Password</label>
+                                <input type="password" class="form-control" id="registerConfirmPassword">
+                            </div>
+                            <div class="button-container">
+                                <button type="submit" class="btn btn-primary btn-submit">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
     </head>
@@ -159,7 +193,7 @@
         
             <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
                 <li class="ms-3"><a href="#">Privacy Policy</a></li>
-                <li class="ms-3"><a href="#">Contact</a></li>
+                <li class="ms-3"><a href="mailto:openstudio@gmail.com">Contact</a></li>
             </ul>
         </footer>
         <!-- Bootstrap JavaScript Libraries -->

@@ -3,6 +3,9 @@ function createProductCard(productsContainer)
 
     let productCard = document.createElement('div');
     productCard.id = 'Product-Card';
+    productCard.addEventListener('click', function() {
+        window.location.href = 'product.html';
+    });
 
     let cardImage = document.createElement('img');
     cardImage.id = 'Card-Image';
