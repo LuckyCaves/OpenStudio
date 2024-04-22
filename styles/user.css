@@ -12,8 +12,9 @@
 
 #Artist-Image
 {
-    border: 2px solid black;
     width: 30%;
+
+    border: none;
 }
 
 #Artist-Image img
@@ -21,6 +22,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 6px;
 }
 
 #Artist-Information
@@ -68,7 +70,7 @@
 {
     width: 100%;
     height: 200px;
-    border: 2px solid black;
+    border-radius: 6px;
 
     object-fit: cover;
 }
