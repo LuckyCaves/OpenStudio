@@ -1,0 +1,351 @@
+
+body {
+    overflow: hidden;
+}
+
+/* ----------------- About------------- */
+.about{
+    display: flex;
+    align-items: flex-start;
+    margin: 5vh;
+    height: 90vh;
+    border-radius: 5vh;
+    position: relative;
+}
+
+.row{
+    padding: 0;
+}
+
+.cell {
+    width: 100%;
+    position: relative;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 4vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    text-align: center;
+    background-color: white;
+}
+
+.cell-1 { height: 24vh; width: 47vw;}
+.cell-2 { height: 24vh; width: 23vw;}
+.cell-3 { height: 44vh; width: 23vw;}
+
+.cell-4 { height: 39vh; width: 23vw; margin-top: -19.5vh;}
+.cell-5 { height: 39vh; width: 47vw; margin-top: -19.5vh;}
+.cell-6 { height: 44vh; width: 23vw;}
+
+.cell-7 { height: 24vh; width: 23vw; margin-top: -24.5vh;} 
+.cell-8 { height: 24vh; width: 23vw; margin-top: -24.5vh;}
+.cell-9 { height: 24vh; width: 23vw; margin-top: -24.5vh;}
+.cell-10 { height: 24vh; width: 23vw;} 
+
+
+/* CELL 1 */
+
+.cell-1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #bacde7;
+}
+
+.cell-1 h2{
+    margin: 1vh;
+    color: white;
+    font-size: 4.4vh;
+    font-weight: 600;
+}
+
+/* CELL 3 */
+
+.cell-3{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    text-align: center;
+    background-image: url('../images/about2.png'); 
+    background-position-x: center;
+    background-size: no-repeat;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+
+.cell-3::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/about2.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: transform 0.5s;
+}
+
+.cell-3:hover::before {
+    transform: scale(1.2);
+}
+
+
+
+/* CELL 4 */
+
+.cell-4{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    text-align: center;
+    background-image: url('../images/about3.png'); 
+    background-position-x: center;
+    background-size: no-repeat;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+
+.cell-4::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/about3.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: transform 0.5s;
+}
+
+.cell-4:hover::before {
+    transform: scale(1.2);
+}
+
+/* CELL 5 */
+
+.container_iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+iframe {
+    border-radius: 4vh;
+}
+
+.overlay-text5 {
+    font-size: 10vh;
+    font-weight: 100;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+.overlay-button5 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: translate(-10px, -18px);
+    font-weight: bold;
+    text-align: left;
+}
+
+.overlay-button5 button {
+    font-family: "Nunito", sans-serif;
+    font-weight: bold;
+    color: #A1AFFB;
+    padding: 10px 30px; 
+    font-size: 2.2vh;
+    background-color: white;
+    border: none;
+    border-radius: 5vh;
+    cursor: pointer;
+}
+
+.overlay-button5 button:hover {
+    color: #4a5bd2;
+}
+
+/* CELL 6 */
+
+.cell-6{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    text-align: center;
+    background-image: url('../images/about1.png'); 
+    background-position-x: center;
+    background-size: no-repeat;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+
+.cell-6::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/about1.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: transform 0.5s;
+}
+
+.cell-6:hover::before {
+    transform: scale(1.2);
+}
+
+/* Cell 2 - 7 - 8 */
+
+.cell-2, .cell-7, .cell-8 { 
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    text-align: center;
+    background-image: radial-gradient(circle 30vh at center, #6a7bf2, #ffffff);
+    position: relative;
+    overflow: hidden;
+}
+
+.cell-7 h3, .cell-8 h3, .cell-2 h3{
+    margin: 0;
+    color: white;
+    font-size: 5vh;
+    font-weight: 600;
+    z-index: 1;
+}
+
+.cell-2::before, .cell-7::before, .cell-8::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle 30vh at center, #6a7bf2, #ffffff);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: transform 0.5s;
+}
+
+.cell-2:hover::before, .cell-7:hover::before, .cell-8:hover::before{
+    transform: scale(2);
+}
+/* Cell 9 */
+
+.cell-9{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    text-align: center;
+    background-image: url('../images/about4.png'); 
+    background-position-x: center;
+    background-size: no-repeat;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+
+.cell-9::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/about4.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: transform 0.5s;
+}
+
+.cell-9:hover::before {
+    transform: scale(1.2);
+}
+
+/* Cell 10 */
+
+.cell-10{
+    border: 1px solid white;
+    background-color: transparent;
+}
+
+/* ----------------- Modals ------------- */
+
+/* -- About Modal -- */
+
+.modal-header,
+.modal-footer {
+    border: none;
+}
+
+#aboutModal .modal-dialog.modal-xl .modal-content {
+    background: 
+        url('media/modal1.png') center no-repeat, 
+        radial-gradient(circle 150vh at bottom left, #bacde7, #ffffff);
+    background-size: cover;
+    height: 90vh;
+    max-width: none;
+    width: 150vw;
+    border-radius: 5vh;
+    text-align: center;
+}
+
+.modal-header h2{
+    font-family: 'Nunito', sans-serif;
+    font-weight: bolder;
+    margin-left: 63vh;
+    color: #6a7bf2;
+    font-size: 8vh;
+    display: flex;
+    justify-content: left;
+}
+
+.modal-body {
+  font-family: 'Nunito', sans-serif;
+  font-weight: bold;
+  color: #6a7bf2;
+  font-size: 4.5vh;
+  margin-left: 63vh;
+  margin-right: 5vh;
+  text-align: left;
+}
+.modal-footer button {
+    margin-right: 4vh; 
+    margin-bottom: 2vh;
+    font-family: 'Nunito', sans-serif;
+    font-size: 3vh;
+    font-style: none;
+    color: white; 
+    text-decoration: none; 
+    padding: 10px 20px; 
+    background-color: #6a7bf2; 
+    border-radius: 5vh; 
+    border: none;
+}
+
+.modal-footer button:hover {
+    background-color: #4a5bd2;
+}
+
