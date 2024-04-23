@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Mind</title>
+    <!-----------------------------------Links------------------------------------------------>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../styles/about_us.css"> 
+</head>
+<body>
+    
+<!----------------------------------Main----------------------------------------------->
+    <main>
+        <!--About-->
+        <section class="about">
+        <div class="container">
+            <div class="row justify-content-center flex-nowrap">
+                <div class="cell cell-1"><h2>
+                    Open Studio enables artists to showcase and sell their art.</h2></div>
+                <div class="cell cell-2" data-toggle="modal" data-target="#adultsModal">
+                    <h3>Paintings</h3>
+                </div>
+                <div class="cell cell-3">></div>
+            </div>
+            <div class="row justify-content-center flex-nowrap">
+                <div class=" cell cell-4"><h3></h3></div>
+                <div class=" cell cell-5">
+                    <div class="container_iframe">
+                        <iframe src='https://my.spline.design/spheresofglasscopy-9172191b601012c89c2e26cd137818c5/'
+                            frameborder='0' width='100%' height='100%'></iframe>
+                        <div class="overlay-text5">About Us</div>
+                        <div class="overlay-button5">
+                            <a href=#contact>
+                                <button type="button" data-toggle="modal" data-target="#aboutModal">
+                                    Meet Our Mission
+                                  </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class=" cell cell-6"></div>
+            </div>
+            <div class="row justify-content-center flex-nowrap">
+                <div class=" cell cell-7" data-toggle="modal" data-target="#adolescentsModal">
+                    <h3>Sculptures</h3>
+                </div>
+                <div class=" cell cell-7" data-toggle="modal" data-target="#childrenModal">
+                    <h3>Prints</h3>
+                </div>
+                <div class=" cell cell-9"></div>
+                <div class=" cell cell-10"></div>
+            </div>
+        </div>
+        </section>
+</main>
+
+<!----------------------------------Modals----------------------------------------------->
+<!--About Modal-->
+<div class="modal fade modal-fullscreen" id="aboutModal" tabindex="-1" role="dialog" aria-labelledby="teamModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl " role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title w-100 text-center" id="teamModalLabel">About Us</h2>
+            </div>
+            <div class="modal-body">
+                <p>Welcome to Open Studio, where creativity meets opportunity. We are dedicated to providing a vibrant platform that empowers artists from all backgrounds to exhibit and monetize their artwork. <br><br>
+                    
+                    Our mission is to connect talented creators with art enthusiasts and collectors, fostering a thriving community passionate about the arts. <br><br>
+                    
+                    Join us at Open Studio, and be part of a community that celebrates and supports the artistic spirit. Explore, discover, and purchase unique artworks that resonate with your soul, or share your own creations with the world. Here, every piece of art tells a story. </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+            
+</body>
+</html>
