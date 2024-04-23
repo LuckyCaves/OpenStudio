@@ -35,6 +35,7 @@ body{
     background-color: #9ad4c4;
     transition: 0.3s ease-out;
     transform: scaleY(1);
+    border-radius: 4px 4px 0 0;
   }
 
 .title h2{
@@ -91,8 +92,16 @@ body{
     height: 280px; 
     background-color: #000000; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    transition: transform 0.5s ease;
     justify-content: flex-end;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+a, a:focus, a:visited {
+    color: inherit; 
+    text-decoration: none; 
+    outline: none; 
 }
 
 .card:hover {
@@ -244,7 +253,7 @@ hr {
     background-size: cover;
 }
 
-  /* --- Modals --- */
+/* --- Modals --- */
 
 .modal-content {
     color: #000;
