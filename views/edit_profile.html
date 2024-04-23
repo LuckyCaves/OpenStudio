@@ -22,7 +22,6 @@
         <link rel="stylesheet" href="../styles/profile.css">
 
         <!-- Controladores -->
-        <script src="../controllers/profile.js"></script>
 
         <!-- Fuente -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -144,18 +143,20 @@
         </header>
         <main>
 
-            <div id="Artist-Card">
+            <div id="Artist-Card-Edit">
 
                 <div id="Artist-Image">
-                    <img src="../images/hero1.png" alt="">
+                    <div style="border: 2px solid black; height: 350px;">
+
+                    </div>
                 </div>
 
                 <div id="Artist-Information">
                     <h1 id="Artist-Name">Artist Name</h1>
-                    <h2 id="Artist-Nationality">Nationality</h2>
-                    <h2 id="Year-Born">b.1925</h2>
-                    <p id="Description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, perferendis, quia saepe similique voluptatem nihil animi quasi maiores laborum repudiandae neque quisquam laboriosam asperiores veritatis tenetur nisi alias, consequuntur nemo!</p>
-                    <a type="button" href="edit_profile.html" class="btn btn-black">Edit Profile</a>
+                    <input type="text" class="form-control mb-3" id="Edit-Artist-Nationality" placeholder="Nationality">
+                    <input type="text" class="form-control mb-3" id="Edit-Year-Born" placeholder="b.1925">
+                    <input type="text" class="form-control mb-3" id="Edit-Description" placeholder="Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, perferendis, quia saepe similique voluptatem nihil animi quasi maiores laborum repudiandae neque quisquam laboriosam asperiores veritatis tenetur nisi alias, consequuntur nemo!">
+                    <button type="submit" class="btn btn-black">Save</button>
                 </div>
                 <!--
                 <div id="Artist-RS">
@@ -164,10 +165,6 @@
                     <a href="#" class="fab fa-pinterest"></a>
                 </div>
                 -->
-            </div>
-
-            <div id="Artist-Product">
-
             </div>
         </main>
         <footer class="d-flex flex-wrap justify-content-between border-top">

@@ -10,6 +10,21 @@
     justify-content: left;
 }
 
+#Artist-Card-Edit
+{
+    padding-left: 2rem;
+    padding-right: 2rem;
+    gap: 5rem;
+
+    display: flex;
+    color: gray;
+
+    justify-content: left;
+
+    height: 100vh;
+}
+
+
 #Artist-Image
 {
     width: 30%;
