@@ -146,3 +146,42 @@ footer a
   color: white;
   text-decoration: none;
 }
+
+/* --- Modals --- */
+
+.modal-content {
+    color: #000;
+    z-index: 10;
+}s
+
+.modal-content .modal-title {
+    font-size: 4vh;
+    font-weight: bold;
+}
+
+.btn-primary {
+    background-color: black;
+    border: none !important;
+    z-index: 1;
+}
+
+.btn-primary:hover {
+    border: 1px solid black !important;
+    background-color: white !important;
+    color: black;
+}
+
+.btn-signup{
+    margin-top: 1.5vh !important;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+}
+
+.btn-submit {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
