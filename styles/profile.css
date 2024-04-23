@@ -1,0 +1,103 @@
+#Artist-Card
+{
+    padding-left: 2rem;
+    padding-right: 2rem;
+    gap: 5rem;
+
+    display: flex;
+    color: gray;
+
+    justify-content: left;
+}
+
+#Artist-Image
+{
+    width: 30%;
+
+    border: none;
+}
+
+#Artist-Image img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+#Artist-Information
+{
+    height: fit-content;
+    width: 20%;
+}
+
+#Artist-Name
+{
+    color: black;
+}
+
+#Artist-RS
+{
+    width: 30%;
+    padding-left: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 3rem;
+    gap: 1rem;
+}
+
+#Artist-RS a
+{
+    color: black;
+    text-decoration: none;
+}
+
+#Artist-RS a:hover
+{
+    color: gray;
+}
+
+#Product-Card
+{
+    background-color: white;
+    transition: 0.3s;
+    break-inside: avoid;
+    padding: 10px;
+}
+
+#Card-Image
+{
+    width: 100%;
+    height: 200px;
+    border-radius: 6px;
+
+    object-fit: cover;
+}
+
+#Artist-Product
+{
+    column-count: 4;
+    column-gap: 20px;
+    margin-top: 3rem;
+    margin: 2rem;
+}
+
+.btn-black {
+    background-color: black;
+    color: white;
+    border: 2px solid black;
+    justify-content: flex-start;
+}
+
+.btn-black:hover {
+    border: 2px solid black;
+}
+
+.remove-btn {
+    border-radius: 100%;
+    float: right;
+    position: relative;
+    top: -50px;
+    right: 10px;
+}
