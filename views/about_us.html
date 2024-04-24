@@ -5,11 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Open Mind</title>
     <!-----------------------------------Links------------------------------------------------>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../styles/about_us.css">
+    
+    <!-- Fuente -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../styles/about_us.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     
@@ -30,7 +35,7 @@
                 <div class=" cell cell-4"><h3></h3></div>
                 <div class=" cell cell-5">
                     <div class="container_iframe">
-                        <iframe src='https://my.spline.design/spheresofglasscopy-9172191b601012c89c2e26cd137818c5/'
+                        <iframe src='https://my.spline.design/spheresofglasscopycopy-1a6b1b42f2878f2d6a9cd7b599cb0421/'
                             frameborder='0' width='100%' height='100%'></iframe>
                         <div class="overlay-text5">About Us</div>
                         <div class="overlay-button5">
@@ -55,6 +60,7 @@
                 <div class=" cell cell-10"></div>
             </div>
         </div>
+        <button class="close-button" onclick="goBack()"><i class="fas fa-times"></i></button>
         </section>
 </main>
 
@@ -69,9 +75,7 @@
             <div class="modal-body">
                 <p>Welcome to Open Studio, where creativity meets opportunity. We are dedicated to providing a vibrant platform that empowers artists from all backgrounds to exhibit and monetize their artwork. <br><br>
                     
-                    Our mission is to connect talented creators with art enthusiasts and collectors, fostering a thriving community passionate about the arts. <br><br>
-                    
-                    Join us at Open Studio, and be part of a community that celebrates and supports the artistic spirit. Explore, discover, and purchase unique artworks that resonate with your soul, or share your own creations with the world. Here, every piece of art tells a story. </p>
+                    Our mission is to connect talented creators with art enthusiasts and collectors, fostering a thriving community passionate about the arts. </p>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -84,6 +88,12 @@
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+  <script>
+    function goBack() {
+        window.history.back();
+    }
+</script>
             
 </body>
 </html>
