@@ -17,7 +17,7 @@ body{
     justify-content: flex-end;
     padding-left: 5rem;
     padding-right: 5rem;
-    padding-bottom: 10rem;
+    padding-bottom: 5rem;
 }
 
 .navbar{
@@ -41,6 +41,14 @@ body{
 .title h2{
     font-size: 5vh;
     padding-left: 5rem;
+}
+
+.title h3{
+    margin-top: 50px;
+    font-size: 3vh;
+    padding-left: 5rem;
+    font-weight: 400;
+
 }
 
 
