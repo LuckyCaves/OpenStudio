@@ -1,7 +1,32 @@
 
+*{
+    font-family: 'Inter', 'Lato', sans-serif;
+}
+
 body {
     overflow: hidden;
 }
+
+/* ----------------- Close Button ------------- */
+
+.close-button {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    top: 20px;
+    right: 20px;
+    background-color: white;
+    border-radius: 50%;
+    border: none;
+    color: #b6dfd6;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.close-button:hover {
+    color: #7dbcae;
+}
+
 
 /* ----------------- About------------- */
 .about{
@@ -22,7 +47,7 @@ body {
     position: relative;
     margin: 5px;
     padding: 10px;
-    border-radius: 4vh;
+    border-radius: 2vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -52,7 +77,7 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: #bacde7;
+    background-color: #b6dfd6;
 }
 
 .cell-1 h2{
@@ -141,7 +166,7 @@ body {
 }
 
 iframe {
-    border-radius: 4vh;
+    border-radius: 2vh;
 }
 
 .overlay-text5 {
@@ -221,7 +246,7 @@ iframe {
     justify-content: center;
     align-items: center; 
     text-align: center;
-    background-image: radial-gradient(circle 30vh at center, #6a7bf2, #ffffff);
+    background-image: radial-gradient(circle 30vh at center, #9a93db, #ffffff);
     position: relative;
     overflow: hidden;
 }
@@ -241,7 +266,7 @@ iframe {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: radial-gradient(circle 30vh at center, #6a7bf2, #ffffff);
+    background-image: radial-gradient(circle 30vh at center, #9a93db, #ffffff);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -302,7 +327,7 @@ iframe {
 
 #aboutModal .modal-dialog.modal-xl .modal-content {
     background: 
-        url('media/modal1.png') center no-repeat, 
+        url('../images/modal.png') center no-repeat, 
         radial-gradient(circle 150vh at bottom left, #bacde7, #ffffff);
     background-size: cover;
     height: 90vh;
@@ -316,7 +341,7 @@ iframe {
     font-family: 'Nunito', sans-serif;
     font-weight: bolder;
     margin-left: 63vh;
-    color: #6a7bf2;
+    color: white;
     font-size: 8vh;
     display: flex;
     justify-content: left;
@@ -325,7 +350,7 @@ iframe {
 .modal-body {
   font-family: 'Nunito', sans-serif;
   font-weight: bold;
-  color: #6a7bf2;
+  color: white;
   font-size: 4.5vh;
   margin-left: 63vh;
   margin-right: 5vh;
@@ -340,12 +365,13 @@ iframe {
     color: white; 
     text-decoration: none; 
     padding: 10px 20px; 
-    background-color: #6a7bf2; 
+    background-color: #A1AFFB; 
     border-radius: 5vh; 
     border: none;
 }
 
 .modal-footer button:hover {
-    background-color: #4a5bd2;
+    background-color: #6a7bf2;
 }
+
 
