@@ -20,6 +20,18 @@ main{
     border-radius: 6px;
 }
 
+#Artist-Name a
+{
+    text-decoration: none;
+    color: black;
+}
+
+#Artist-Name a:hover
+{
+    transition: letter-spacing 0.3s;
+    letter-spacing: 1px;
+}
+
 #Product-Details
 {
     width: 50%;
