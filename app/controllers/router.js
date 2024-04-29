@@ -1,0 +1,24 @@
+const express = require('express');
+const path = require('path');
+
+const router = express.Router();
+
+// const productRouter = require('../routes/products.js');
+// const adminProductRouter = require('../routes/admin_products.js');
+
+// router.use('/products', productRouter);
+// router.use('/admin/products', validateAdmin, adminProductRouter);
+
+router.get('/', (req, res) => res.sendFile(path.resolve(__dirname + "/../web/views/home.html")));
+router.get('/home', (req, res) => res.sendFile(path.resolve(__dirname + "/../web/views/home.html")));
+
+router.get('/art_collection', (req, res) => res.sendFile(path.resolve(__dirname + "/../web/views/art_collection.html")));
+router.get('/about_us', (req, res) => res.sendFile(path.resolve(__dirname + "/../web/views/about_us.html")));
+router.get('/cart', (req, res) => res.sendFile(path.resolve(__dirname + "/../web/views/cart.html")));
+router.get('/edit_profile', (req, res) => res.sendFile(path.resolve(__dirname + "/../web/views/edit_profile.html")));
+router.get('/product', (req, res) => res.sendFile(path.resolve(__dirname + "/../web/views/product.html")));
+router.get('/profile', (req, res) => res.sendFile(path.resolve(__dirname + "/../web/views/profile.html")));
+router.get('/upload', (req, res) => res.sendFile(path.resolve(__dirname + "/../web/views/upload.html")));
+router.get('/user', (req, res) => res.sendFile(path.resolve(__dirname + "/../web/views/user.html")));
+
+module.exports = router;
