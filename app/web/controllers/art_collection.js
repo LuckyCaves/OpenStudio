@@ -4,13 +4,13 @@ function createProductCard(productsContainer)
     let productCard = document.createElement('div');
     productCard.id = 'Product-Card';
     productCard.addEventListener('click', function() {
-        window.location.href = 'product.html';
+        window.location.href = 'product';
     });
 
     let cardImage = document.createElement('img');
     cardImage.id = 'Card-Image';
     let imageNumber = getRandomInt(5) - 4;
-    cardImage.src = '../images/image' + Math.floor(imageNumber) + '.png';
+    cardImage.src = '../web/images/image' + Math.floor(imageNumber) + '.png';
     let blockSize = getRandomInt(15);
     cardImage.style.blockSize = blockSize + 'em';
 
