@@ -3,10 +3,11 @@ const path = require('path');
 
 const router = express.Router();
 
-// const productRouter = require('../routes/products.js');
+const productRouter = require('../routes/products.js');
+const cartRouter = require('../routes/cart.js');
 // const adminProductRouter = require('../routes/admin_products.js');
 
-// router.use('/products', productRouter);
+router.use('/products', productRouter);
 // router.use('/admin/products', validateAdmin, adminProductRouter);
 
 router.get('/', (req, res) => res.sendFile(path.resolve(__dirname + "/../web/views/home.html")));
