@@ -21,8 +21,7 @@
         <link rel="stylesheet" href="../web/styles/basic.css">
         <link rel="stylesheet" href="../web/styles/upload.css">
 
-        <!-- Controladores -->
-        <script src="../controllers/"></script>
+
 
         <!-- Fuente -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -149,13 +148,13 @@
                 <h4 class="mb-4"><a href="" id="back-btn">&lt; Back</a></h2>
                 <nav>
                 <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
-                    <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Contact Information <span class="marker">></span></button>
-                    <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Artwork Details <span class="marker">></span></button>
-                    <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Upload Photos <span class="marker">></span></button>
+                    <button class="nav-link active" id="nav-first-tab" data-bs-toggle="tab" data-bs-target="#nav-first" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Contact Information <span class="marker">></span></button>
+                    <button class="nav-link" id="nav-second-tab" data-bs-toggle="tab" data-bs-target="#nav-second" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Artwork Details <span class="marker">></span></button>
+                    <button class="nav-link" id="nav-third-tab" data-bs-toggle="tab" data-bs-target="#nav-third" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Upload Photos <span class="marker">></span></button>
                 </div>
                 </nav>
                 <div class="tab-content" id="nav-tabContent">
-                    <div class="tab-pane fade mt-4 mb-4 show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
+                    <div class="tab-pane fade mt-4 mb-4 show active" id="nav-first" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
                         <form>
                             <div class="m-container d-flex flex-column">
                                 <div class="mb-3">
@@ -167,17 +166,17 @@
                                 </div>
                                 
                                 <div class="mb-3 form-check">
-                                    <input type="checkbox" class="form-check-input" id="check">
+                                    <input type="checkbox" class="form-check-input" id="checkInfo">
                                     <label class="form-check-label" for="exampleCheck1">I allow this information to be publicly available to anyone interested on my products</label>
                                 </div>
 
                                 <div class="mt-auto">
-                                    <button type="submit" class="btn btn-black">Save and continue</button>
+                                    <button type="button" class="btn btn-black" id="btn-1">Save and continue</button>
                                 </div>
                             </div>
                         </form>
                     </div>
-                    <div class="tab-pane fade mt-4 mb-4" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0">
+                    <div class="tab-pane fade mt-4 mb-4" id="nav-second" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0">
                         <form>
                             <div class="m-container d-flex flex-column">
                                 <div class="mb-3">
@@ -190,8 +189,8 @@
                                 
                                 <div class="row"> 
                                     <div class="mb-3 col-md-6">
-                                        <select class="form-select ">
-                                            <option selected>Category</option>
+                                        <select class="form-select" id="category">
+                                            <option value="none" selected>Category</option>
                                             <option value="1">One</option>
                                             <option value="2">Two</option>
                                             <option value="3">Three</option>
@@ -199,8 +198,8 @@
                                     </div>
 
                                     <div class="mb-3 col-md-6">
-                                        <select class="form-select ">
-                                            <option selected>Media</option>
+                                        <select class="form-select" id="media">
+                                            <option value="none" selected>Media</option>
                                             <option value="1">One</option>
                                             <option value="2">Two</option>
                                             <option value="3">Three</option>
@@ -228,12 +227,12 @@
 
 
                                 <div class="mt-auto">
-                                    <button type="submit" class="btn btn-black">Save and continue</button>
+                                    <button type="button" class="btn btn-black" id="btn-2">Save and continue</button>
                                 </div>
                             </div>
                         </form>
                     </div>
-                    <div class="tab-pane fade mt-4 mb-4" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab" tabindex="0">
+                    <div class="tab-pane fade mt-4 mb-4" id="nav-third" role="tabpanel" aria-labelledby="nav-contact-tab" tabindex="0">
                         <form>
                             <div class="m-container d-flex flex-column">
                                 <div class="mb-3" style="border: 2px solid black; height: 300px;">
@@ -241,7 +240,7 @@
                                 </div>
         
                                 <div class="mt-auto">
-                                    <button type="submit" class="btn btn-black">Save and continue</button>
+                                    <button type="button" class="btn btn-black" id="btn-3">Save and continue</button>
                                 </div>
                             </div>
                         </form>
@@ -271,5 +270,8 @@
             integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
             crossorigin="anonymous"
         ></script>
+
+        <!-- Controladores -->
+        <script src="../web/controllers/upload.js"></script>
     </body>
 </html>
