@@ -6,10 +6,12 @@ const router = express.Router();
 const productRouter = require('../routes/products.js');
 const cartRouter = require('../routes/cart.js');
 const adminProductRouter = require('../routes/admin_products.js');
+const uploadRouter = require('../routes/upload_image.js');
 
 router.use('/products', productRouter);
 router.use('/cart', cartRouter);
 router.use('/admin/products', validateAdmin, adminProductRouter);
+router.use('/upload', uploadRouter);
 
 function validateAdmin(req, res, next)
 {

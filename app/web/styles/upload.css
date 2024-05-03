@@ -42,3 +42,8 @@
 #back-btn:hover {
     text-decoration: underline;
 }
+
+#myDropzone {
+    border: 2px dashed black;
+    background-color: whitesmoke;
+}

@@ -33,7 +33,7 @@ let productSchema = mongoose.Schema({
     image: String
 });
 
-let Product = mongoose.model('Product', art_products);
+//let Product = mongoose.model('Product', art_products);
 
 router.post('/', (req, res) => {
 

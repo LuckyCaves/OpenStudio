@@ -15,6 +15,13 @@
 //ultimo boton hace lo mismo pero en vez de enviar a la siguiente tab hace un post a la base de datos
 //+ investigar como hacer lo de subir las imagenes
 
+
+if(true) { //validacion de sesion ira aqui
+
+} else {
+//redirigir a inicio de sesion ira aqui
+}
+
 //VARS
 let name_input = document.getElementById("name");
 let email_input = document.getElementById("email");
@@ -48,14 +55,6 @@ let c_size;
 let c_stock;
 let c_price;
 
-save_btn_one.addEventListener('click', function () {
-    save_first_tab_values();
-});
-
-save_btn_two.addEventListener('click', function () {
-    save_second_tab_values();
-});
-
 function save_first_tab_values () {
     console.log(name_input.value);
     if(name_input.value !== "" && email_input.value !== "") {
@@ -70,6 +69,7 @@ function save_first_tab_values () {
 function save_second_tab_values () {
     if(c_name == undefined || c_email == undefined) {
         alert("CAMPOS VACIOS EN LA SECCION ANTERIOR");
+        tab_button_1.click();
         return;
     }
 
@@ -87,8 +87,39 @@ function save_second_tab_values () {
     }
 }
 
-if(true) { //validacion de sesion ira aqui
+function save_third_tab_values () {
+    if(c_name == undefined || c_email == undefined) {
+        alert("CAMPOS VACIOS EN LA PRIMERA SECCION");
+        tab_button_1.click();
+        return;
+    }
 
-} else {
-//redirigir a inicio de sesion ira aqui
+    if(c_name == undefined || c_email == undefined) {
+        alert("CAMPOS VACIOS EN LA SECCION ANTERIOR");
+        tab_button_2.click();
+        return;
+    }
 }
+
+save_btn_one.addEventListener('click', function () {
+    save_first_tab_values();
+});
+
+save_btn_two.addEventListener('click', function () {
+    save_second_tab_values();
+});
+
+Dropzone.autoDiscover = false;
+var myDropzone = new Dropzone("#myDropzone", {
+    url: "/upload", 
+    paramName: "file", 
+    maxFilesize: 2, // Maximum file size in MB
+    maxFiles: 1, // Limit to one file
+    acceptedFiles: "image/*" 
+});
+
+myDropzone.on("maxfilesexceeded", function(file) {
+    alert("Products may only have one image.");
+    this.removeFile(file);
+});
+
