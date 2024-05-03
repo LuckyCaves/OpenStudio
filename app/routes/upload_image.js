@@ -17,8 +17,9 @@ const upload = multer({ storage: storage });
 
 router.post('/', upload.single('file'), (req, res) => {
     console.log('File uploaded:', req.file);
-    // Here you can process the uploaded file and save the relevant information to your database
-    res.send('File uploaded successfully');
+
+    let fileName = req.file.filename;
+    res.send(fileName);
 });
 
 module.exports = router;

@@ -54,6 +54,8 @@ let c_media;
 let c_size;
 let c_stock;
 let c_price;
+let c_sku;
+let c_image;
 
 function save_first_tab_values () {
     console.log(name_input.value);
@@ -82,6 +84,7 @@ function save_second_tab_values () {
         c_stock = stock_input.value;
         c_price = price_input.value;
         tab_button_3.click();
+        c_sku = c_name.substring(0, 3) + c_title.substring(0, 3) + c_price.toString();
     } else {
         alert("CAMPOS VACIOS");
     }
@@ -89,16 +92,24 @@ function save_second_tab_values () {
 
 function save_third_tab_values () {
     if(c_name == undefined || c_email == undefined) {
-        alert("CAMPOS VACIOS EN LA PRIMERA SECCION");
+        alert("MISSING FIELDS IN THE FIRST SECTION");
         tab_button_1.click();
         return;
     }
 
-    if(c_name == undefined || c_email == undefined) {
-        alert("CAMPOS VACIOS EN LA SECCION ANTERIOR");
+    if(c_title == undefined || c_year  == undefined || c_category  == undefined || c_media == undefined || c_size == undefined || c_stock  == undefined || c_stock  == undefined || c_price == undefined) {
+        alert("MISSING FIELDS IN THE SECOND SECTION");
         tab_button_2.click();
         return;
     }
+
+    if(c_image == undefined) {
+        alert("PLEASE UPLOAD AN IMAGE")
+        return;
+    }
+
+    /*fetch post with json object with all variables goes here*/
+    console.log(c_image);
 }
 
 save_btn_one.addEventListener('click', function () {
@@ -109,13 +120,22 @@ save_btn_two.addEventListener('click', function () {
     save_second_tab_values();
 });
 
+save_btn_thr.addEventListener('click', function () {
+    save_third_tab_values ()
+});
+
 Dropzone.autoDiscover = false;
 var myDropzone = new Dropzone("#myDropzone", {
     url: "/upload", 
     paramName: "file", 
     maxFilesize: 2, // Maximum file size in MB
     maxFiles: 1, // Limit to one file
-    acceptedFiles: "image/*" 
+    acceptedFiles: "image/*", 
+    init: function () {
+        this.on('success', function (file, response) {
+          c_image = `/images/${response}`; 
+        });
+      }
 });
 
 myDropzone.on("maxfilesexceeded", function(file) {
