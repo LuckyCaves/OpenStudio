@@ -1,21 +1,3 @@
-
-//validar sesion iniciada
-//  SI NO: redirigir a inicio de sesion
-//get del nombre y del mail del usuario (ya inicio sesion, estos son datos conocidos)
-//insertar nombre y mail en campos
-
-//hacer que al dar click a Save en Continue:
-//  verifique que todos los campos esten llenos
-//      SI NO: Alert
-//  guardar en variables los datos en los inputs
-//  dar click al boton del siguiente tab
-
-//REPETIR PARA LA SIGUIENTE TAB
-
-//ultimo boton hace lo mismo pero en vez de enviar a la siguiente tab hace un post a la base de datos
-//+ investigar como hacer lo de subir las imagenes
-
-
 if(true) { //validacion de sesion ira aqui
 
 } else {
@@ -35,6 +17,8 @@ let height_input = document.getElementById("height");
 let width_input = document.getElementById("width");
 let stock_input = document.getElementById("stock");
 let price_input = document.getElementById("price");
+
+let description_input = document.getElementById("description");
 
 let save_btn_one = document.getElementById("btn-1");
 let save_btn_two = document.getElementById("btn-2");
@@ -56,6 +40,7 @@ let c_stock;
 let c_price;
 let c_sku;
 let c_image;
+let c_description;
 
 function save_first_tab_values () {
     console.log(name_input.value);
@@ -75,7 +60,7 @@ function save_second_tab_values () {
         return;
     }
 
-    if(title_input.value !== "" && year_input.value !== "" && category_input.value !== "none" && media_input.value !== "none" && height_input.value !== "" && width_input.value !== "" && stock_input.value !== "" && price_input.value !== "") {
+    if(title_input.value !== "" && year_input.value !== "" && category_input.value !== "none" && media_input.value !== "" && height_input.value !== "" && width_input.value !== "" && stock_input.value !== "" && price_input.value !== "") {
         c_title = title_input.value;
         c_year = year_input.value;
         c_category = category_input.value;
@@ -108,8 +93,44 @@ function save_third_tab_values () {
         return;
     }
 
-    /*fetch post with json object with all variables goes here*/
-    console.log(c_image);
+    if(c_description == undefined) {
+        alert("PLEASE WRITE A DESCRIPTION FOR YOUR PRODUCT")
+        return;
+    } else {
+        c_description = description_input.value;
+    }
+
+    let postData = {
+        artist: c_name,
+        title: c_title,
+        year: c_year,
+        description: c_description, 
+        method: c_media, 
+        dimensions: c_size,
+        price: c_price,
+        quantity: c_stock,
+        image: c_image
+    };
+
+    fetch("/admin_products", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(postData)
+    })
+    .then(response => {
+        if (response.ok) {
+            console.log("Product created successfully");
+        } else {
+            // Handle error response
+            throw new Error("Failed to create product");
+        }
+    })
+    .catch(error => {
+        console.error("Error:", error);
+        alert("Failed to create product. Please try again.");
+    });
 }
 
 save_btn_one.addEventListener('click', function () {
