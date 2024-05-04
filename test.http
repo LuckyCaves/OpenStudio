@@ -1,0 +1,204 @@
+POST http://localhost:3000/admin/products HTTP/1.1
+content-type: application/json
+x-auth: Hola
+
+{
+    "artist": "Frank W. Benson",
+    "title": "Sunlight",
+    "year": 1909,
+    "category": "Painting",
+    "method": "Oil paint, Canvas",
+    "dimensions": "32 x 20",
+    "collection": "",
+    "price": "1",
+    "quantity": "1",
+    "image": "http://localhost:3000/web/images/product/sunlight_benson.jpg"
+}
+
+###
+
+POST http://localhost:3000/admin/products HTTP/1.1
+content-type: application/json
+x-auth: Hola
+
+{
+    "artist": "Émile Bernard",
+    "title": "Breton Women at a Wall",
+    "year": 1892,
+    "category": "Painting",
+    "method": "Oil paint, Cardboard",
+    "dimensions": "32.875 x 45.5",
+    "collection": "",
+    "price": "1",
+    "quantity": "1",
+    "image": "http://localhost:3000/web/images/product/breton_women_at_a_wall_emile.jpg"
+}
+
+###
+
+
+POST http://localhost:3000/admin/products HTTP/1.1
+content-type: application/json
+x-auth: Hola
+
+{
+    "artist": "Isabel Bishop",
+    "title": "Tidiying Up",
+    "year": 1941,
+    "category": "Painting",
+    "method": "Oil paint, Masonite",
+    "dimensions": "15 x 11.5",
+    "collection": "",
+    "price": "1",
+    "quantity": "1",
+    "image": "http://localhost:3000/web/images/product/tidiying_up_isabel.jpg"
+}
+
+###
+
+POST http://localhost:3000/admin/products HTTP/1.1
+content-type: application/json
+x-auth: Hola
+
+{
+    "artist": "Alfred Thompson Bricher",
+    "title": "Morning at Grand Manan",
+    "year": 1878,
+    "category": "Painting",
+    "method": "Oil paint, Canvas",
+    "dimensions": "25 x 50",
+    "collection": "",
+    "price": "1",
+    "quantity": "1",
+    "image": "http://localhost:3000/web/images/product/morning_at_grand_manan_alfred.jpg"
+}
+
+###
+POST http://localhost:3000/admin/products HTTP/1.1
+content-type: application/json
+x-auth: Hola
+
+{
+    "artist": "Jean-Baptiste Carpeaux",
+    "title": "The Negress",
+    "year": 1868,
+    "category": "Sculpture",
+    "method": "Bronze",
+    "dimensions": "22.375",
+    "collection": "",
+    "price": "1",
+    "quantity": "1",
+    "image": "http://localhost:3000/web/images/product/the_negress_jean-baptiste.jpg"
+}
+
+###
+POST http://localhost:3000/admin/products HTTP/1.1
+content-type: application/json
+x-auth: Hola
+
+{
+    "artist": "Paul Cézanne",
+    "title": "House in Provence",
+    "year": 1885,
+    "category": "Painting",
+    "method": "Oil paint, Canvas",
+    "dimensions": "25.5 x 32",
+    "collection": "",
+    "price": "1",
+    "quantity": "1",
+    "image": "http://localhost:3000/web/images/product/house_in_provence_paul.jpg"
+}
+
+###
+
+POST http://localhost:3000/admin/products HTTP/1.1
+content-type: application/json
+x-auth: Hola
+
+{
+    "artist": "William Merritt Chase",
+    "title": "Dorothy",
+    "year": 1902,
+    "category": "Painting",
+    "method": "Oil paint, Canvas",
+    "dimensions": "72 x 36",
+    "collection": "",
+    "price": "1",
+    "quantity": "1",
+    "image": "http://localhost:3000/web/images/product/dorothy_william.jpg"
+}
+
+###
+POST http://localhost:3000/admin/products HTTP/1.1
+content-type: application/json
+x-auth: Hola
+
+{
+    "artist": "John Sell Cotman",
+    "title": "Blasting St. Vincent's Rock, Clifton",
+    "year": 1830,
+    "category": "Painting",
+    "method": "Watercolor, Gum arabic, Pencil, Paper",
+    "dimensions": "13.5 x 22.75",
+    "collection": "",
+    "price": "1",
+    "quantity": "1",
+    "image": "http://localhost:3000/web/images/product/blasting_st_vincents_rock_clifton_john.jpg"
+}
+
+###
+POST http://localhost:3000/admin/products HTTP/1.1
+content-type: application/json
+x-auth: Hola
+
+{
+    "artist": "Lucas Cranach the Elder",
+    "title": "The Crucifixion",
+    "year": 1532,
+    "category": "Painting",
+    "method": "Oil paint, Wood",
+    "dimensions": "30 x 21.5",
+    "collection": "",
+    "price": "1",
+    "quantity": "1",
+    "image": "http://localhost:3000/web/images/product/the_crucifixion_lucas.jpg"
+}
+
+###
+POST http://localhost:3000/admin/products HTTP/1.1
+content-type: application/json
+x-auth: Hola
+
+{
+    "artist": "Aelbert Cuyp",
+    "title": "The Valkhof at Nijmegen",
+    "year": 1652-4,
+    "category": "Painting",
+    "method": "Oil paint, Wood",
+    "dimensions": "19.25 x 29",
+    "collection": "",
+    "price": "1",
+    "quantity": "1",
+    "image": "http://localhost:3000/web/images/product/the_crucifixion_lucas.jpg"
+}
+
+###
+
+
+
+PUT http://localhost:3000/admin/products/FraSun1 HTTP/1.1
+content-type: application/json
+x-auth: Hola
+
+{
+    "collection": ""
+}
+
+###
+DELETE  http://localhost:3000/admin/products/FraSun1 HTTP/1.1
+content-type: application/json
+x-auth: Hola
+
+###
+GET  http://localhost:3000/products HTTP/1.1
+content-type: application/json

@@ -2,10 +2,11 @@ const express = require('express');
 const mongoose = require('mongoose');
 
 const router = express.Router();
+connectDB();
 
 function connectDB()
 {
-    let mongoConnection = "";
+    let mongoConnection = "mongodb+srv://admin:Tadeo6714@myapp.ycpafeh.mongodb.net/OpenStudio";
     let db = mongoose.connection;
 
     db.on('connecting', () => {
@@ -22,34 +23,37 @@ function connectDB()
 }
 
 let productSchema = mongoose.Schema({
+    sku: String,
     artist: String,
     title: String,
     year: Number,
-    description: String,
+    category: String,
     method: String,
     dimensions: String,
     price: Number,
     quantity: Number,
-    image: String
+    image: String,
+    colection: String
 });
 
-//let Product = mongoose.model('Product', art_products);
+let Product = mongoose.model('art_products', productSchema);
 
 router.post('/', (req, res) => {
 
-    let sku = req.body.artist.substring(0, 3) + req.body.title.substring(0, 3) + req.body.price.toString();
+    let skuf = req.body.artist.substring(0, 3) + req.body.title.substring(0, 3) + req.body.price.toString();
 
     let newProduct = {
-        sku: sku,
+        sku: skuf,
         artist: req.body.artist,
         title: req.body.title,
         year: req.body.year,
-        description: req.body.description,
+        category: req.body.category,
         method: req.body.method,
         dimensions: req.body.dimensions,
         price: req.body.price,
         quantity: req.body.quantity,
-        image: req.body.image
+        image: req.body.image,
+        colection: req.body.collection
     };
 
     let product = Product(newProduct);
@@ -66,12 +70,13 @@ router.post('/', (req, res) => {
 
 router.put('/:sku', (req, res) => {
     
-        let sku = req.params.sku,
+        
+        let category = req.body.category,
             year = req.body.year,
-            description = req.body.description,
             price = req.body.price,
             quantity = req.body.quantity,
             image = req.body.image,
+            colection = req.body.collection,
             object_to_update = {},
             flag_updated = false;
 
@@ -81,9 +86,9 @@ router.put('/:sku', (req, res) => {
             flag_updated = true;
         }
 
-        if (description !== undefined)
+        if (category !== undefined)
         {
-            object_to_update.description = description;
+            object_to_update.category = category;
             flag_updated = true;
         }
 
@@ -105,9 +110,15 @@ router.put('/:sku', (req, res) => {
             flag_updated = true;
         }
 
+        if (colection !== undefined)
+        {
+            object_to_update.colection = colection;
+            flag_updated = true;
+        }
+
         if(flag_updated)
         {
-            Product.findbyIdAndUpdate(sky, object_to_update, {new: true}).then((doc) => {
+            Product.findOneAndUpdate({sku: req.params.sku}, object_to_update, {new: true}).then((doc) => {
                 console.log(doc);
                 res.send("Producto actualizado con éxito");
             })
@@ -120,9 +131,7 @@ router.put('/:sku', (req, res) => {
 
 router.delete('/:sku', (req, res) => {
 
-    let sku = req.params.sku;
-
-    Product.findByIdAndDelete(sku).then((doc) => {
+    Product.findOneAndDelete({sku: req.params.sku}).then((doc) => {
         res.status(201).send("Producto eliminado con éxito");
     })
     .catch((err) => {
