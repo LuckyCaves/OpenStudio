@@ -9,7 +9,7 @@ body{
 
 .hero{
     height: 100vh;
-    background-image:linear-gradient(transparent, white), url(../images/hero1.png);
+    background-image:linear-gradient(transparent, white), url(../images/hero1.webp);
     background-size: cover;
     background-position: center;
     display: flex;
