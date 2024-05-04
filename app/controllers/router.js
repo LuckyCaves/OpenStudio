@@ -1,7 +1,28 @@
 const express = require('express');
 const path = require('path');
+const mongoose = require('mongoose');
 
 const router = express.Router();
+
+connectDB();
+
+function connectDB()
+{
+    let mongoConnection = "mongodb+srv://admin:Tadeo6714@myapp.ycpafeh.mongodb.net/OpenStudio";
+    let db = mongoose.connection;
+
+    db.on('connecting', () => {
+        console.log('Conectando a la base de datos...');
+        console.log(mongoose.connection.readyState);
+    });
+
+    db.on('connected', () => {
+        console.log('Conectado a la base de datos');
+        console.log(mongoose.connection.readyState);
+    });
+
+    mongoose.connect(mongoConnection, {useNewUrlParser: true});
+}
 
 const productRouter = require('../routes/products.js');
 const cartRouter = require('../routes/cart.js');

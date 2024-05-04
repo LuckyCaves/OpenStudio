@@ -1,35 +1,42 @@
 const express = require('express');
-const mongoose = require('mongoose');
+const Product = require('../controllers/product.js');
 
 const router = express.Router();
 
-connectDB();
-
-function connectDB()
+async function getItems()
 {
-    let mongoConnection = "mongodb+srv://admin:Tadeo6714@myapp.ycpafeh.mongodb.net/OpenStudio";
-    let db = mongoose.connection;
-
-    db.on('connecting', () => {
-        console.log('Conectando a la base de datos...');
-        console.log(mongoose.connection.readyState);
-    });
-
-    db.on('connected', () => {
-        console.log('Conectado a la base de datos');
-        console.log(mongoose.connection.readyState);
-    });
-
-    mongoose.connect(mongoConnection, {useNewUrlParser: true});
+    const products = await Product.find({});
+    return products;
 }
 
 router.get('/', (req, res) => {
 
-    Product.find({}, (err, products) => {
-        if(err) {
-            res.status(500).send(err);
-        }
+    if(req.body.page !== undefined)
+    {
+        let page = req.body.page;
+    }
+
+    getItems().then((products) => {
         res.status(200).send(products);
+    })
+    .catch((err) => {
+        res.status(400).send("No se pudieron obtener los productos");
+    });
+
+});
+
+router.get('/:sku', (req, res) => {
+
+    const sku = req.params.sku;
+
+    Product.find({
+        sku: sku
+    }).
+    then(function (docs){
+        res.status(200).send(docs);
+    }).
+    catch((err) => {
+        res.status(400).send("No se pudo obtener el producto");
     });
 
 });

@@ -5,12 +5,13 @@ main{
 #Product
 {
     display: flex;
+    justify-content: center;
     gap: 2rem;
 }
 
 #Product-Image
 {
-    width: 50%;
+    width: 28%;
 }
 
 #Product-Image img

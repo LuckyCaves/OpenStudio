@@ -183,6 +183,24 @@ x-auth: Hola
 }
 
 ###
+POST http://localhost:3000/admin/products HTTP/1.1
+content-type: application/json
+x-auth: Hola
+
+{
+    "artist": "Edgar Degas",
+    "title": "Young Woman in Blue",
+    "year": 1882,
+    "category": "Painting",
+    "method": "Pastel, Paper",
+    "dimensions": "18.5 x 29",
+    "collection": "",
+    "price": "1",
+    "quantity": "1",
+    "image": "http://localhost:3000/web/images/product/young_woman_in_blue_edgar.jpg"
+}
+
+###
 
 
 
@@ -201,4 +219,8 @@ x-auth: Hola
 
 ###
 GET  http://localhost:3000/products HTTP/1.1
+content-type: application/json
+
+###
+GET  http://localhost:3000/products/AlfMor1 HTTP/1.1
 content-type: application/json

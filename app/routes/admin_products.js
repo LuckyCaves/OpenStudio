@@ -1,42 +1,8 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const Product = require('../controllers/product.js');
 
 const router = express.Router();
-connectDB();
-
-function connectDB()
-{
-    let mongoConnection = "mongodb+srv://admin:Tadeo6714@myapp.ycpafeh.mongodb.net/OpenStudio";
-    let db = mongoose.connection;
-
-    db.on('connecting', () => {
-        console.log('Conectando a la base de datos...');
-        console.log(mongoose.connection.readyState);
-    });
-
-    db.on('connected', () => {
-        console.log('Conectado a la base de datos');
-        console.log(mongoose.connection.readyState);
-    });
-
-    mongoose.connect(mongoConnection, {useNewUrlParser: true});
-}
-
-let productSchema = mongoose.Schema({
-    sku: String,
-    artist: String,
-    title: String,
-    year: Number,
-    category: String,
-    method: String,
-    dimensions: String,
-    price: Number,
-    quantity: Number,
-    image: String,
-    colection: String
-});
-
-let Product = mongoose.model('art_products', productSchema);
 
 router.post('/', (req, res) => {
 
@@ -70,7 +36,6 @@ router.post('/', (req, res) => {
 
 router.put('/:sku', (req, res) => {
     
-        
         let category = req.body.category,
             year = req.body.year,
             price = req.body.price,
