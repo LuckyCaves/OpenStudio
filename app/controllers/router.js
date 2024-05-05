@@ -30,6 +30,7 @@ const cartRouter = require('../routes/cart.js');
 const adminProductRouter = require('../routes/admin_products.js');
 const adminArtistRouter = require('../routes/admin_artists.js');
 const uploadRouter = require('../routes/upload_image.js');
+const accountRoutes = require('../routes/account');
 
 router.use('/products', productRouter);
 router.use('/artists', artistRouter);
@@ -37,6 +38,7 @@ router.use('/cart', cartRouter);
 router.use('/admin/products', validateAdmin, adminProductRouter);
 router.use('/admin/artists', validateAdmin, adminArtistRouter);
 router.use('/upload', uploadRouter);
+router.use(accountRoutes);
 
 function validateAdmin(req, res, next)
 {
