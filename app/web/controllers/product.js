@@ -19,21 +19,50 @@ function fillInfo(product)
     productQuantity.innerHTML = product.quantity;
     productPrice.innerHTML = "US$" + product.price;
 
+    getArtistId(product.artist);
+
 }
 
 function getProduct(sku)
 {
 
     const xhr = new XMLHttpRequest();
-    xhr.open('GET', 'http://localhost:3000/products/' + sku, true);
+    xhr.open('GET', 'http://localhost:3000/products/sku', true);
     
     xhr.setRequestHeader('Content-Type', 'application/json');
+    xhr.setRequestHeader('value', sku);
 
     xhr.onload = function() {
         if (xhr.status === 200) {
             const response = JSON.parse(xhr.responseText);
 
             fillInfo(response[0]);
+
+        } else {
+            console.error('Request failed. Status:', xhr.status);
+        }
+    };
+
+    xhr.onerror = function() {
+        console.error('Request error');
+    };
+
+    xhr.send();
+}
+
+function getArtistId(artist)
+{
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', 'http://localhost:3000/artists/artist', true);
+    
+    xhr.setRequestHeader('Content-Type', 'application/json');
+    xhr.setRequestHeader('value', artist);
+
+    xhr.onload = function() {
+        if (xhr.status === 200) {
+            const response = JSON.parse(xhr.responseText);
+
+            localStorage.setItem('artist', response[0].artistNumber);
 
         } else {
             console.error('Request failed. Status:', xhr.status);

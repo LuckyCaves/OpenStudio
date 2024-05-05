@@ -224,3 +224,187 @@ content-type: application/json
 ###
 GET  http://localhost:3000/products/AlfMor1 HTTP/1.1
 content-type: application/json
+
+
+###
+
+POST http://localhost:3000/admin/artists HTTP/1.1
+content-type: application/json
+x-auth: Hola
+
+{
+    "artistNumber": 1,
+    "artist": "Frank W. Benson",
+    "year": 1862,
+    "nationality": "American",
+    "description":  " American artist from Salem, Massachusetts known for his Realistic portraits, American Impressionist paintings, watercolors and etchings.",
+    "facebook": "facebook.com",
+    "instagram": "instagram.com",
+    "pinterest": "pinterest.com"
+}
+
+###
+
+POST http://localhost:3000/admin/artists HTTP/1.1
+content-type: application/json
+x-auth: Hola
+
+{
+    "artistNumber": 2,
+    "artist": "Émile Bernard",
+    "year": 1868,
+    "nationality": "French",
+    "description":  "French Post-Impressionist painter and writer, who had artistic friendships with Vincent van Gogh, Paul Gauguin and Eugène Boch, and at a later time, Paul Cézanne. Most of his notable work was accomplished at a young age, in the years 1886 through 1897. He is also associated with Cloisonnism and Synthetism, two late 19th-century art movements.",
+    "facebook": "facebook.com",
+    "instagram": "instagram.com",
+    "pinterest": "pinterest.com"
+}
+
+###
+
+POST http://localhost:3000/admin/artists HTTP/1.1
+content-type: application/json
+x-auth: Hola
+
+{
+    "artistNumber": 3,
+    "artist": "Isabel Bishop",
+    "year": 1902,
+    "nationality": "American",
+    "description":  "American painter and graphic artist. Bishop studied under Kenneth Hayes Miller at the Art Students League of New York, where she would later become an instructor. She was most notable for her scenes of everyday life in Manhattan, as a member of the loosely-defined ‘Fourteenth Street School’ of artists, grouped in that precinct.",
+    "facebook": "facebook.com",
+    "instagram": "instagram.com",
+    "pinterest": "pinterest.com"
+}
+
+###
+POST http://localhost:3000/admin/artists HTTP/1.1
+content-type: application/json
+x-auth: Hola
+
+{
+    "artistNumber": 4,
+    "artist": "Alfred Thompson Bricher",
+    "year": 1837,
+    "nationality": "American",
+    "description":  "American painter associated with White Mountain art and the Hudson River School.",
+    "facebook": "facebook.com",
+    "instagram": "instagram.com",
+    "pinterest": "pinterest.com"
+}
+
+###
+POST http://localhost:3000/admin/artists HTTP/1.1
+content-type: application/json
+x-auth: Hola
+
+{
+    "artistNumber": 5,
+    "artist": "Jean-Baptiste Carpeaux",
+    "year": 1827,
+    "nationality": "French",
+    "description":  "French sculptor and painter during the Second Empire under Napoleon III.",
+    "facebook": "facebook.com",
+    "instagram": "instagram.com",
+    "pinterest": "pinterest.com"
+}
+
+###
+POST http://localhost:3000/admin/artists HTTP/1.1
+content-type: application/json
+x-auth: Hola
+
+{
+    "artistNumber": 6,
+    "artist": "Paul Cézanne",
+    "year": 1839,
+    "nationality": "French",
+    "description":  "French Post-Impressionist painter whose work introduced new modes of representation and influenced avant-garde artistic movements of the early 20th century. Cézanne is said to have formed the bridge between late 19th-century Impressionism and early 20th century Cubism.",
+    "facebook": "facebook.com",
+    "instagram": "instagram.com",
+    "pinterest": "pinterest.com"
+}
+
+###
+POST http://localhost:3000/admin/artists HTTP/1.1
+content-type: application/json
+x-auth: Hola
+
+{
+    "artistNumber": 7,
+    "artist": "William Merritt Chase",
+    "year": 1849,
+    "nationality": "American",
+    "description": "American painter, known as an exponent of Impressionism and as a teacher. He is also responsible for establishing the Chase School, which later became the Parsons School of Design.",
+    "facebook": "facebook.com",
+    "instagram": "instagram.com",
+    "pinterest": "pinterest.com"
+}
+
+###
+POST http://localhost:3000/admin/artists HTTP/1.1
+content-type: application/json
+x-auth: Hola
+
+{
+    "artistNumber": 8,
+    "artist": "John Sell Cotman",
+    "year": 1782,
+    "nationality": "British",
+    "description": "English marine and landscape painter, etcher, illustrator, and a leading member of the Norwich School of painters.",
+    "facebook": "facebook.com",
+    "instagram": "instagram.com",
+    "pinterest": "pinterest.com"
+}
+
+###
+POST http://localhost:3000/admin/artists HTTP/1.1
+content-type: application/json
+x-auth: Hola
+
+{
+    "artistNumber": 9,
+    "artist": "Lucas Cranach the Elder",
+    "year": 1472,
+    "nationality": "German",
+    "description": " German Renaissance painter and printmaker in woodcut and engraving. He was court painter to the Electors of Saxony for most of his career, and is known for his portraits, both of German princes and those of the leaders of the Protestant Reformation, whose cause he embraced with enthusiasm. He was a close friend of Martin Luther.",
+    "facebook": "facebook.com",
+    "instagram": "instagram.com",
+    "pinterest": "pinterest.com"
+}
+
+###
+POST http://localhost:3000/admin/artists HTTP/1.1
+content-type: application/json
+x-auth: Hola
+
+{
+    "artistNumber": 10,
+    "artist": "Edgar Degas",
+    "year": 1834,
+    "nationality": "French",
+    "description": "French Impressionist artist famous for his pastel drawings and oil paintings. Degas also produced bronze sculptures, prints, and drawings. Degas is especially identified with the subject of dance; more than half of his works depict dancers.",
+    "facebook": "facebook.com",
+    "instagram": "instagram.com",
+    "pinterest": "pinterest.com"
+}
+
+###
+
+###
+GET  http://localhost:3000/artists HTTP/1.1
+content-type: application/json
+
+###
+
+GET  http://localhost:3000/artists/artist HTTP/1.1
+content-type: application/json
+
+{
+    "value": "Frank W. Benson"
+}
+###
+
+GET  http://localhost:3000/products/artist HTTP/1.1
+content-type: application/json
+value: Frank W. Benson

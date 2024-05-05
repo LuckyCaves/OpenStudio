@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
-let productSchema = mongoose.Schema({
-    id: Number,
+let artistSchema = mongoose.Schema({
+    artistNumber: Number,
     artist: String,
     year: Number,
     nationality: String,
@@ -12,6 +12,6 @@ let productSchema = mongoose.Schema({
 
 });
 
-let Product = mongoose.model('art_products', productSchema);
+let Artist = mongoose.model('artists', artistSchema);
 
-module.exports = Product;
+module.exports = Artist;
