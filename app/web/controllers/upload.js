@@ -44,18 +44,18 @@ let c_description;
 
 function save_first_tab_values () {
     console.log(name_input.value);
-    if(name_input.value !== "" && email_input.value !== "") {
+    if(name_input.value !== "" && email_input.value !== "" && document.getElementById("checkInfo").checked) {
         c_name = name_input.value;
         c_email = email_input.value;
         tab_button_2.click();
     } else {
-        alert("CAMPOS VACIOS");
+        alert("PLEASE FILL ALL FIELDS AND ACCEPT OUR POLICY");
     }
 }
 
 function save_second_tab_values () {
     if(c_name == undefined || c_email == undefined) {
-        alert("CAMPOS VACIOS EN LA SECCION ANTERIOR");
+        alert("MISSING FIELDS IN THE LAST SECTION");
         tab_button_1.click();
         return;
     }
@@ -71,7 +71,7 @@ function save_second_tab_values () {
         tab_button_3.click();
         c_sku = c_name.substring(0, 3) + c_title.substring(0, 3) + c_price.toString();
     } else {
-        alert("CAMPOS VACIOS");
+        alert("PLEASE FILL ALL FIELDS");
     }
 }
 
@@ -103,12 +103,12 @@ function save_third_tab_values () {
     let postData = {
         artist: c_name,
         title: c_title,
-        year: c_year,
+        year: Number(c_year),
         category: c_category,
         method: c_media, 
         dimensions: c_size,
-        price: c_price,
-        quantity: c_stock,
+        price: Number(c_price),
+        quantity: Number(c_stock),
         image: c_image
     };
 
