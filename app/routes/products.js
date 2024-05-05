@@ -9,19 +9,36 @@ async function getItems()
     return products;
 }
 
+async function getItemsLimited(start, end)
+{
+    const products = await Product.find({}).skip(start).limit(end);
+    return products;
+}
+
 router.get('/', (req, res) => {
 
-    if(req.body.page !== undefined)
+    if(req.headers['page'] !== undefined)
     {
-        let page = req.body.page;
+        let page = req.headers['page'];
+        let start = page - 10;
+
+        getItemsLimited(start, 10).then((products) => {
+            res.status(200).send(products);
+        })
+        .catch((err) => {
+            res.status(400).send("No se pudieron obtener los productos");
+        });
+    }
+    else
+    {
+        getItems().then((products) => {
+            res.status(200).send(products);
+        })
+        .catch((err) => {
+            res.status(400).send("No se pudieron obtener los productos");
+        });
     }
 
-    getItems().then((products) => {
-        res.status(200).send(products);
-    })
-    .catch((err) => {
-        res.status(400).send("No se pudieron obtener los productos");
-    });
 
 });
 

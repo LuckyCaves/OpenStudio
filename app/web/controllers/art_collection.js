@@ -1,3 +1,4 @@
+
 function createProductCard(productsContainer, product)
 {
 
@@ -10,10 +11,7 @@ function createProductCard(productsContainer, product)
 
     let cardImage = document.createElement('img');
     cardImage.id = 'Card-Image';
-    let imageNumber = getRandomInt(5) - 4;
     cardImage.src = product.image;
-    // let blockSize = getRandomInt(15);
-    // cardImage.style.blockSize = blockSize + 'em';
 
     let cardTitle = document.createElement('h5');
     cardTitle.id = 'Card-Title';
@@ -31,15 +29,6 @@ function createProductCard(productsContainer, product)
 
 }
 
-function generateCards()
-{
-    let productsContainer = document.getElementById('Products-Container');
-    for (let i = 0; i < 12; i++)
-    {
-        let productCard = createProductCard(productsContainer);
-    }
-}
-
 function getRandomInt(max) {
     return 5 + Math.random() * max;
 }
@@ -51,8 +40,17 @@ function changePage(numero)
 }
 
 window.onload = function() {
-    getProducts();
+    getProducts(10);
 };
+
+function changePage(numero)
+{
+
+    let productsContainer = document.getElementById('Products-Container');
+    productsContainer.innerHTML = '';
+
+    getProducts(numero);
+}
 
 function getProducts(page)
 {
@@ -63,9 +61,7 @@ function getProducts(page)
     xhr.setRequestHeader('Content-Type', 'application/json');
     if(page !== undefined)
     {
-        deleteListener();
-        cleanProductsCard();
-        xhr.setRequestHeader('page', pageNumber);
+        xhr.setRequestHeader('page', page);
     }
 
     xhr.onload = function() {

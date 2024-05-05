@@ -201,6 +201,24 @@ x-auth: Hola
 }
 
 ###
+POST http://localhost:3000/admin/products HTTP/1.1
+content-type: application/json
+x-auth: Hola
+
+{
+    "artist": "Émile Bernard",
+    "title": "Nus dans un paysage",
+    "year": 1890,
+    "category": "Painting",
+    "method": "Oil paint, Canvas",
+    "dimensions": "23.7 x 19.4",
+    "collection": "",
+    "price": "1",
+    "quantity": "1",
+    "image": "http://localhost:3000/web/images/product/nus_dans_un_paysage_emil.jpg"
+}
+
+###
 
 
 
@@ -392,8 +410,9 @@ x-auth: Hola
 ###
 
 ###
-GET  http://localhost:3000/artists HTTP/1.1
+GET  http://localhost:3000/products HTTP/1.1
 content-type: application/json
+page: 10
 
 ###
 

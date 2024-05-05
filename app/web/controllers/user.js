@@ -10,10 +10,7 @@ function createProductCard(productsContainer, product)
 
     let cardImage = document.createElement('img');
     cardImage.id = 'Card-Image';
-    let imageNumber = getRandomInt(5) - 4;
     cardImage.src = product.image;
-    // let blockSize = getRandomInt(15);
-    // cardImage.style.blockSize = blockSize + 'em';
 
     let cardTitle = document.createElement('h5');
     cardTitle.id = 'Card-Title';
@@ -56,23 +53,19 @@ function fillArtistInfo(artist)
     artistPinterest.href = artist.pinterest;
 }
 
-function generateCards()
+function fillArtistPhoto(products)
 {
-    let productsContainer = document.getElementById('Artist-Product');
-    for (let i = 0; i < 12; i++)
-    {
-        let productCard = createProductCard(productsContainer);
-    }
+
+    let totalProducts = products.length;
+    let i = getRandomInt(totalProducts);
+
+    let artistPhoto = document.getElementById('Artist-Image');
+    artistPhoto.firstElementChild.src = products[i].image;
+
 }
 
 function getRandomInt(max) {
-    return 5 + Math.random() * max;
-}
-
-function changePage(numero)
-{
-    let page = document.getElementById('page');
-    page.innerHTML = numero;
+    return Math.floor(Math.random() * max);
 }
 
 function getArtist(id)
@@ -118,6 +111,7 @@ function getProducts(artist)
             response.forEach(function(product) {
                 createProductCard(productsContainer, product);
             });
+            fillArtistPhoto(response);
 
         } else {
             console.error('Request failed. Status:', xhr.status);
