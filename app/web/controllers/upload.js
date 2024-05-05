@@ -102,7 +102,8 @@ function save_third_tab_values () {
         dimensions: c_size,
         price: Number(c_price),
         quantity: Number(c_stock),
-        image: c_image
+        image: c_image,
+        colection: ""
     };
 
     fetch("/admin/products", {
