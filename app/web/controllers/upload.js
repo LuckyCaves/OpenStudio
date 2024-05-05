@@ -93,13 +93,6 @@ function save_third_tab_values () {
         return;
     }
 
-    if(c_description == undefined) {
-        alert("PLEASE WRITE A DESCRIPTION FOR YOUR PRODUCT")
-        return;
-    } else {
-        c_description = description_input.value;
-    }
-
     let postData = {
         artist: c_name,
         title: c_title,
@@ -112,10 +105,11 @@ function save_third_tab_values () {
         image: c_image
     };
 
-    fetch("/admin_products", {
+    fetch("/admin/products", {
         method: "POST",
         headers: {
-            "Content-Type": "application/json"
+            "Content-Type": "application/json",
+            "x-auth": "Hola"
         },
         body: JSON.stringify(postData)
     })
