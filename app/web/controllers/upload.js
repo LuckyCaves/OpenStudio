@@ -104,7 +104,7 @@ function save_third_tab_values () {
         artist: c_name,
         title: c_title,
         year: c_year,
-        description: c_description, 
+        category: c_category,
         method: c_media, 
         dimensions: c_size,
         price: c_price,
@@ -142,7 +142,7 @@ save_btn_two.addEventListener('click', function () {
 });
 
 save_btn_thr.addEventListener('click', function () {
-    save_third_tab_values ()
+    save_third_tab_values();
 });
 
 Dropzone.autoDiscover = false;
@@ -154,7 +154,7 @@ var myDropzone = new Dropzone("#myDropzone", {
     acceptedFiles: "image/*", 
     init: function () {
         this.on('success', function (file, response) {
-          c_image = `/images/${response}`; 
+          c_image = `http://localhost:3000/web/images/${response}`; 
         });
       }
 });
