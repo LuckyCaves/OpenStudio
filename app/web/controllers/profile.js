@@ -154,6 +154,39 @@ function getProducts(artist)
     xhr.send();
 }
 
+document.getElementById("dimiss-edits").addEventListener('click', function () {
+    window.location.href = '/profile';
+});
+
+let artistN = 1; //will be artN of the loged user once both databases are united
+
+document.getElementById("delete-profile").addEventListener('click', function () {
+    fetch(`/admin/artists/${artistN}`, {
+        method: 'DELETE',  
+        headers: {
+            "x-auth": "Hola"
+        }
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('No se pudo eliminar el producto');
+        }
+        return response.text();
+    })
+    .then(data => {
+        console.log(data); // "Producto eliminado con éxito"
+    })
+    .catch(error => {
+        console.error('Error en la solicitud:', error);
+    });
+});
+
+document.getElementById("save-edits").addEventListener('click', function () {
+    
+});
+
+
 window.onload = function() {
+    //get to, well, get the artist number of yourself
     getArtist(localStorage.getItem('artist'));
 };

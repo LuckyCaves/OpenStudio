@@ -154,9 +154,12 @@
                 <div id="Artist-Information">
                     <h1 id="Artist-Name">Artist Name</h1>
                     <input type="text" class="form-control mb-3" id="Edit-Artist-Nationality" placeholder="Nationality">
-                    <input type="text" class="form-control mb-3" id="Edit-Year-Born" placeholder="b.1925">
-                    <input type="text" class="form-control mb-3" id="Edit-Description" placeholder="Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, perferendis, quia saepe similique voluptatem nihil animi quasi maiores laborum repudiandae neque quisquam laboriosam asperiores veritatis tenetur nisi alias, consequuntur nemo!">
-                    <button type="submit" class="btn btn-black">Save</button>
+                    <input type="text" class="form-control mb-3" id="Edit-Year-Born" placeholder="Year">
+                    <input type="text" class="form-control mb-3" id="Edit-Description" placeholder="Description">
+                    <button type="button" id="save-edits" class="btn btn-black">Save</button>
+                    <button type="button" id="dimiss-edits" class="btn btn-black">Cancel</button>
+                    <hr>
+                    <button type="button" id="delete-profile" class="btn btn-black">Delete profile</button>
                 </div>
                 <!--
                 <div id="Artist-RS">
@@ -178,6 +181,10 @@
             </ul>
         </footer>
         <!-- Bootstrap JavaScript Libraries -->
+
+        <!-- Controladores -->
+        <script src="../web/controllers/profile.js"></script>
+
         <script
             src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
             integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
