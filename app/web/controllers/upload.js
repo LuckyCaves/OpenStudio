@@ -1,12 +1,26 @@
-if(true) { //validacion de sesion ira aqui
-
-} else {
-//redirigir a inicio de sesion ira aqui
+function checkAuthentication() {
+    return fetch('/is-authenticated')
+        .then(response => response.json())
+        .then(data => data.isAuthenticated)
+        .catch(error => {
+            console.error('Error checking authentication status:', error);
+            return false;
+        });
 }
+
+checkAuthentication()
+    .then(isAuthenticated => {
+        if (!isAuthenticated) {
+            alert('PLEASE LOG IN TO SELL A PRODUCT');
+            window.location.href = '/';
+        } 
+    });
+
 
 //VARS
 let name_input = document.getElementById("name");
 let email_input = document.getElementById("email");
+
 let check = document.getElementById("checkInfo");
 
 let title_input = document.getElementById("title");
@@ -41,6 +55,25 @@ let c_price;
 let c_sku;
 let c_image;
 let c_description;
+
+function getUserInfo() {
+    return fetch('/user-info')
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                name_input.defaultValue = data.name;
+                email_input.defaultValue = data.email;
+            } else {
+                console.error('Error obtaining the user data:', data.message);
+            }
+        })
+        .catch(error => {
+            console.log(response);
+            console.error('Error request:', error);
+        });
+}
+
+getUserInfo();
 
 function save_first_tab_values () {
     console.log(name_input.value);

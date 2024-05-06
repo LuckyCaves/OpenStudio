@@ -17,6 +17,15 @@ router.get('/logout', (req, res) => {
     });
 });
 
+router.get('/user-info', (req, res) => {
+    if (!req.session.user) {
+        return res.status(401).json({ success: false, message: 'User not authenticated' });
+    }
+
+    const { name, email } = req.session.user;
+    res.json({ success: true, name, email });
+});
+
 router.post('/signup', async (req, res) => {
     const { name, email, password, confirmPassword } = req.body;
   
