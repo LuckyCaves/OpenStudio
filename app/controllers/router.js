@@ -34,7 +34,7 @@ const accountRoutes = require('../routes/account');
 
 router.use('/products', productRouter);
 router.use('/artists', artistRouter);
-router.use('/cart', cartRouter);
+router.use('/carts', cartRouter);
 router.use('/admin/products', validateAdmin, adminProductRouter);
 router.use('/admin/artists', validateAdmin, adminArtistRouter);
 router.use('/upload', uploadRouter);
@@ -53,6 +53,8 @@ router.get('/', (req, res) => res.sendFile(path.resolve(__dirname + "/../web/vie
 router.get('/home', (req, res) => res.sendFile(path.resolve(__dirname + "/../web/views/home.html")));
 
 router.get('/art_collection', (req, res) => res.sendFile(path.resolve(__dirname + "/../web/views/art_collection.html")));
+router.get('/art_collectionA', (req, res) => res.sendFile(path.resolve(__dirname + "/../web/views/art_collectionA.html")));
+router.get('/art_collectionB', (req, res) => res.sendFile(path.resolve(__dirname + "/../web/views/art_collectionB.html")));
 router.get('/about_us', (req, res) => res.sendFile(path.resolve(__dirname + "/../web/views/about_us.html")));
 router.get('/cart', (req, res) => res.sendFile(path.resolve(__dirname + "/../web/views/cart.html")));
 router.get('/edit_profile', (req, res) => res.sendFile(path.resolve(__dirname + "/../web/views/edit_profile.html")));

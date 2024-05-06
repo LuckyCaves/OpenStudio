@@ -32,6 +32,16 @@ main
     padding: 10px;
 }
 
+#Category-Card #Card-Image
+{
+    width: 90%;
+    height: 15rem;
+    border: none;
+    border-radius: 6px;
+
+    object-fit: cover;
+}
+
 #Card-Image
 {
     width: 90%;

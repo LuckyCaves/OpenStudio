@@ -47,15 +47,30 @@ router.get('/:field', (req, res) => {
     const value = req.headers['value'];
     const field = req.params.field;
 
-    Product.find({
-        [field]: value
-    }).
-    then(function (docs){
-        res.status(200).send(docs);
-    }).
-    catch((err) => {
-        res.status(400).send("No se pudo obtener el producto");
-    });
+    if(req.headers['page'] !== undefined)
+    {
+        Product.find({
+            [field]: value
+        }).skip(req.headers['page'] - 10).limit(10).
+        then(function (docs){
+            res.status(200).send(docs);
+        }).
+        catch((err) => {
+            res.status(400).send("No se pudo obtener el producto");
+        });
+    }
+    else
+    {
+        Product.find({
+            [field]: value
+        }).
+        then(function (docs){
+            res.status(200).send(docs);
+        }).
+        catch((err) => {
+            res.status(400).send("No se pudo obtener el producto");
+        });
+    }
 
 });
 

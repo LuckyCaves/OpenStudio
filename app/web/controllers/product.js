@@ -15,8 +15,21 @@ function fillInfo(product)
     productTitle.innerHTML = product.title;
     productYear.innerHTML = product.year;
     productMethod.innerHTML = product.method;
-    productDimension.innerHTML = product.dimensions;
-    productQuantity.innerHTML = product.quantity;
+    productDimension.innerHTML = product.dimensions + " inches";
+
+    if(product.quantity == 0)
+    {
+        productQuantity.innerHTML = "Out of stock";
+        let button = document.getElementById('Purchase-btn');
+        button.href = "#";
+        button.disabled = true;
+        button.innerHTML = "Out of stock";
+    }
+    else if(product.quantity == 1)
+        productQuantity.innerHTML = "Unique work";
+    else
+        productQuantity.innerHTML = product.quantity + " units available";
+
     productPrice.innerHTML = "US$" + product.price;
 
     getArtistId(product.artist);
