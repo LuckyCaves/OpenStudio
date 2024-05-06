@@ -31,6 +31,7 @@ const adminProductRouter = require('../routes/admin_products.js');
 const adminArtistRouter = require('../routes/admin_artists.js');
 const uploadRouter = require('../routes/upload_image.js');
 const accountRoutes = require('../routes/account');
+const paymentRouter = require('../routes/payment.js');
 
 router.use('/products', productRouter);
 router.use('/artists', artistRouter);
@@ -38,6 +39,7 @@ router.use('/carts', cartRouter);
 router.use('/admin/products', validateAdmin, adminProductRouter);
 router.use('/admin/artists', validateAdmin, adminArtistRouter);
 router.use('/upload', uploadRouter);
+router.use('/payment', paymentRouter);
 router.use(accountRoutes);
 
 function validateAdmin(req, res, next)
@@ -57,6 +59,7 @@ router.get('/art_collectionA', (req, res) => res.sendFile(path.resolve(__dirname
 router.get('/art_collectionB', (req, res) => res.sendFile(path.resolve(__dirname + "/../web/views/art_collectionB.html")));
 router.get('/about_us', (req, res) => res.sendFile(path.resolve(__dirname + "/../web/views/about_us.html")));
 router.get('/cart', (req, res) => res.sendFile(path.resolve(__dirname + "/../web/views/cart.html")));
+router.get('/payment', (req, res) => res.sendFile(path.resolve(__dirname + "/../web/views/payment.html")));
 router.get('/edit_profile', (req, res) => res.sendFile(path.resolve(__dirname + "/../web/views/edit_profile.html")));
 router.get('/product', (req, res) => res.sendFile(path.resolve(__dirname + "/../web/views/product.html")));
 router.get('/profile', (req, res) => res.sendFile(path.resolve(__dirname + "/../web/views/profile.html")));
