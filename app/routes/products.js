@@ -15,6 +15,13 @@ async function getItemsLimited(start, end)
     return products;
 }
 
+router.get('/search', (req, res) => {
+    const { title } = req.query;
+    Product.find({ title: { $regex: title, $options: "i" } })  // Case insensitive search
+        .then(products => res.json(products))
+        .catch(err => res.status(500).json({ message: "Error fetching products", error: err }));
+});
+
 router.get('/', (req, res) => {
 
     if(req.headers['page'] !== undefined)
@@ -73,5 +80,6 @@ router.get('/:field', (req, res) => {
     }
 
 });
+
 
 module.exports = router;

@@ -66,4 +66,14 @@ router.get('/profile', (req, res) => res.sendFile(path.resolve(__dirname + "/../
 router.get('/upload', (req, res) => res.sendFile(path.resolve(__dirname + "/../web/views/upload.html")));
 router.get('/user', (req, res) => res.sendFile(path.resolve(__dirname + "/../web/views/user.html")));
 
+router.get('/search_collection', (req, res) => {
+    const filePath = path.resolve(__dirname, "../web/views/search_collection.html");
+    res.sendFile(filePath, (err) => {
+        if (err) {
+            console.error('Failed to send file:', err);
+            res.status(500).send("Failed to load the page.");
+        }
+    });
+});
+
 module.exports = router;
