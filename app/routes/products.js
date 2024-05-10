@@ -17,7 +17,7 @@ async function getItemsLimited(start, end)
 
 router.get('/search', (req, res) => {
     const { title } = req.query;
-    Product.find({ title: { $regex: title, $options: "i" } })  // Case insensitive search
+    Product.find({ title: { $regex: title, $options: "i" } })
         .then(products => res.json(products))
         .catch(err => res.status(500).json({ message: "Error fetching products", error: err }));
 });

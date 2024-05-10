@@ -1,3 +1,7 @@
+function getBaseURL() {
+    return window.location.hostname === 'localhost' ? 'http://localhost:3000' : 'https://openstudio.onrender.com';
+}
+
 
 function createProductCard(productsContainer, product)
 {
@@ -94,7 +98,7 @@ function getProducts(page)
 {
 
     const xhr = new XMLHttpRequest();
-    xhr.open('GET', 'http://localhost:3000/products', true);
+    xhr.open('GET', '/products', true);
     
     xhr.setRequestHeader('Content-Type', 'application/json');
     if(page !== undefined)
