@@ -40,7 +40,7 @@ function getProduct(sku)
 {
 
     const xhr = new XMLHttpRequest();
-    xhr.open('GET', 'http://localhost:3000/products/sku', true);
+    xhr.open('GET', '/products/sku', true);
     
     xhr.setRequestHeader('Content-Type', 'application/json');
     xhr.setRequestHeader('value', sku);
@@ -66,7 +66,7 @@ function getProduct(sku)
 function getArtistId(artist)
 {
     const xhr = new XMLHttpRequest();
-    xhr.open('GET', 'http://localhost:3000/artists/artist', true);
+    xhr.open('GET', '/artists/artist', true);
     
     xhr.setRequestHeader('Content-Type', 'application/json');
     xhr.setRequestHeader('value', artist);
