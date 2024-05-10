@@ -94,7 +94,7 @@ function getProducts(page)
 {
 
     const xhr = new XMLHttpRequest();
-    xhr.open('GET', 'http://localhost:3000/products/category', true);
+    xhr.open('GET', '/products/category', true);
     
     xhr.setRequestHeader('Content-Type', 'application/json');
     xhr.setRequestHeader('value', 'Painting');
@@ -127,7 +127,7 @@ function getProducts(page)
 function getCategoriesImage(category)
 {
     const xhr = new XMLHttpRequest();
-    xhr.open('GET', 'http://localhost:3000/products', true);
+    xhr.open('GET', '/products', true);
     
     xhr.setRequestHeader('Content-Type', 'application/json');
     
