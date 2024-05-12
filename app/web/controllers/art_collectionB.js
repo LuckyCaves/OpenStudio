@@ -78,6 +78,7 @@ function changePage(numero)
 window.onload = function() {
     getProducts(10);
     addCatCards();
+    getProductsTotal();
 };
 
 function changePage(numero)
@@ -160,4 +161,55 @@ function addCatCards()
     getCategoriesImage('Sculpture');
     getCategoriesImage();
     
+}
+
+function createPaginate(total)
+{
+
+    let paginate = document.getElementById('Paginado').firstElementChild;
+
+    let pages = Math.ceil(total / 10);
+
+    let ul = document.createElement('ul');
+
+    for(let i = 1; i <= pages; i++)
+    {
+        let li = document.createElement('li');
+        if(i === 1)
+            li.className = 'current';
+
+        let a = document.createElement('a');
+        a.href = 'javascript:changePage(' + i  * 10 + ')';
+        a.innerHTML = i;
+
+        li.appendChild(a);
+        ul.appendChild(li);
+
+    }
+    paginate.appendChild(ul);
+
+}
+
+function getProductsTotal()
+{
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', '/products/category', true);
+    
+    xhr.setRequestHeader('Content-Type', 'application/json');
+    xhr.setRequestHeader('value', 'Scultpure');
+
+    xhr.onload = function() {
+        if (xhr.status === 200) {
+            const response = JSON.parse(xhr.responseText);
+            createPaginate(response.length);
+        } else {
+            console.error('Request failed. Status:', xhr.status);
+        }
+    };
+
+    xhr.onerror = function() {
+        console.error('Request error');
+    };
+
+    xhr.send();
 }

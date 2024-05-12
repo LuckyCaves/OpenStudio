@@ -19,10 +19,6 @@
 
         <!-- Hojas de estilos -->
         <link rel="stylesheet" href="../web/styles/basic.css">
-        <link rel="stylesheet" href="../web/styles/art_collection.css">
-
-        <!-- Controladores -->
-        <script src="../web/controllers/art_collection.js"></script>
 
         <!-- Fuente -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -101,7 +97,6 @@
             </div>
         </div>
 
-
     </head>
 
     <body>
@@ -145,26 +140,20 @@
         </header>
         <main>
 
-            <div id="Title-Container">
-                <h1 id="Title">Collect art online</h1>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 offset-md-3 text-center">
+                        <h1>Purchase Complete</h1>
+                        <p>Your purchase was successful. You will be redirected to the home page shortly.</p>
+                    </div>
+                </div>
             </div>
 
-            <div id="Category-Container">
-            </div>
-
-            <div id="Products-Container">
-
-            </div>
-
-            <div id="Paginado">
-                <nav data-pagination>
-                    <!-- <ul>
-                        <li class=current><a href=javascript:changePage(10)>1</a>
-                        <li><a href="javascript:changePage(20)">2</a>
-                        <li><a href=javascript:changePage(30)>3</a>
-                    </ul> -->
-                </nav>
-            </div>
+            <script>
+                setTimeout(function() {
+                    window.location.href = "home";
+                }, 3000); // Redirect after 3 seconds
+            </script>
 
         </main>
         <footer class="d-flex flex-wrap justify-content-between border-top">
@@ -173,8 +162,10 @@
             </div>
         
             <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-                <li class="ms-3"><a href="#">Privacy Policy</a></li>
-                <li class="ms-3"><a href="mailto:openstudio@gmail.com">Contact</a></li>
+                <li class="ms-3"><a href="about_us">About Us</a></li>
+                <li class="ms-3">
+                    <a href="mailto:openstudio@gmail.com">Contact</a>
+                </li>
             </ul>
         </footer>
         <!-- Bootstrap JavaScript Libraries -->

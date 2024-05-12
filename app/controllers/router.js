@@ -64,6 +64,8 @@ router.get('/edit_profile', (req, res) => res.sendFile(path.resolve(__dirname + 
 router.get('/product', (req, res) => res.sendFile(path.resolve(__dirname + "/../web/views/product.html")));
 router.get('/profile', (req, res) => res.sendFile(path.resolve(__dirname + "/../web/views/profile.html")));
 router.get('/upload', (req, res) => res.sendFile(path.resolve(__dirname + "/../web/views/upload.html")));
+router.get('/success', (req, res) => res.sendFile(path.resolve(__dirname + "/../web/views/success.html")));
+router.get('/cancel', (req, res) => res.sendFile(path.resolve(__dirname + "/../web/views/cancel.html")));
 router.get('/user', (req, res) => res.sendFile(path.resolve(__dirname + "/../web/views/user.html")));
 
 router.get('/search_collection', (req, res) => {
