@@ -6,7 +6,7 @@ const path = require('path');
 // Set up Multer for handling file uploads
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
-        cb(null, path.resolve(__dirname, '../web/images/')); 
+        cb(null, path.resolve(__dirname, '../web/images/product/')); 
     },
     filename: function (req, file, cb) {
         cb(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname)); // Change to use SKU

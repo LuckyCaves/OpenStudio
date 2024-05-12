@@ -171,6 +171,7 @@ save_btn_two.addEventListener('click', function () {
 
 save_btn_thr.addEventListener('click', function () {
     save_third_tab_values();
+    alert("PRODUCT CREATED SUCCESFULLY")
 });
 
 Dropzone.autoDiscover = false;
@@ -182,7 +183,7 @@ var myDropzone = new Dropzone("#myDropzone", {
     acceptedFiles: "image/*", 
     init: function () {
         this.on('success', function (file, response) {
-          c_image = `http://localhost:3000/web/images/${response}`; 
+          c_image = `http://localhost:3000/web/images/product/${response}`; 
         });
       }
 });
