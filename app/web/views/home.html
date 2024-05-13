@@ -17,6 +17,9 @@
             crossorigin="anonymous"
         />
 
+        <!-- Lottie -->
+        <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
+
         <!-- Hojas de estilos -->
         <link rel="stylesheet" href="../web/styles/basic.css">
         <link rel="stylesheet" href="../web/styles/home.css">
@@ -40,6 +43,7 @@
 
     <body>
         <main>
+
         <header>
             <nav id="navbar" class="navbar navbar-expand-sm">
 				<div class="container-fluid">
@@ -206,6 +210,9 @@
             <div class="modal fade" id="modalId" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="Login" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm" role="document">
                     <div class="modal-content">
+                        <div id="lottie-animation-login" style="display:none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 50%; max-width: 300px; height: 50%; max-height: 600px; background-color: white; border-radius: 20px; z-index: 1050; overflow: hidden;">
+                            <iframe src="https://lottie.host/embed/d920ba6d-ca64-4543-80a1-2d3d29bb7701/Hny73MkuAM.json" width="100%" height="100%" style="border:none;"></iframe>
+                        </div>                        
                         <div class="modal-header">
                             <h5 class="modal-title" id="Login">Log in</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -242,6 +249,9 @@
             <div class="modal fade" id="Register" tabindex="-1" aria-labelledby="RegisterLabel" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm">
                     <div class="modal-content">
+                        <div id="lottie-animation-signup" style="display:none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 50%; max-width: 300px; height: 50%; max-height: 600px; background-color: white; border-radius: 20px; z-index: 1050; overflow: hidden;">
+                            <iframe src="https://lottie.host/embed/d920ba6d-ca64-4543-80a1-2d3d29bb7701/Hny73MkuAM.json" width="100%" height="100%" style="border:none;"></iframe>
+                        </div>
                         <div class="modal-header">
                             <h5 class="modal-title" id="RegisterLabel">Sign Up</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>

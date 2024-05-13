@@ -1,62 +1,56 @@
 document.addEventListener("DOMContentLoaded", function () {
     const loginForm = document.getElementById('loginForm');
-    loginForm.addEventListener('submit', function (e) {
-        e.preventDefault();  
+    const signupForm = document.getElementById('signupForm');
+    const lottieAnimationLogin = document.getElementById('lottie-animation-login');
+    const lottieAnimationSignup = document.getElementById('lottie-animation-signup');
 
+    function showAnimationThenReload(animationElement) {
+        animationElement.style.display = 'block'; // Show the animation
+        setTimeout(() => {
+            animationElement.style.display = 'none'; // Hide the animation after 3000 ms (3 seconds)
+            window.location.reload(); // Reload the page or redirect as necessary
+        }, 3000);
+    }
+
+    loginForm.addEventListener('submit', function (e) {
+        e.preventDefault();
         const formData = new URLSearchParams(new FormData(loginForm));
         fetch('/login', {
             method: 'POST',
             headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
             body: formData.toString()
-        })
-        .then(response => {
-            if (!response.ok) {
-                return response.json().then(err => Promise.reject(err));
-            }
-            return response.json();
-        })
-        .then(data => {
-            if (data.success) {
-                alert('Login successful!');
-                window.location.reload(); 
-            } else {
-                alert('Login failed: ' + data.message);
-            }
-        })
-        .catch(error => {
-            alert('Login failed: ' + (error.message || 'Server error'));
-        });
+        }).then(response => response.json())
+          .then(data => {
+              if (data.success) {
+                  showAnimationThenReload(lottieAnimationLogin); // Show login animation on success
+              } else {
+                  alert('Login failed: ' + data.message);
+              }
+          }).catch(error => {
+              alert('Login failed: ' + (error.message || 'Server error'));
+          });
     });
 
-    const signupForm = document.getElementById('signupForm');
     signupForm.addEventListener('submit', function (e) {
         e.preventDefault();
-
         const formData = new URLSearchParams(new FormData(signupForm));
         fetch('/signup', {
             method: 'POST',
             headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
             body: formData.toString()
-        })
-        .then(response => {
-            if (!response.ok) {
-                return response.json().then(err => Promise.reject(err));
-            }
-            return response.json();
-        })
-        .then(data => {
-            if (data.success) {
-                alert('Signup successful!');
-                window.location.reload(); 
-            } else {
-                alert('Signup failed: ' + data.message);
-            }
-        })
-        .catch(error => {
-            alert('Signup failed: ' + (error.message || 'Server error'));
-        });
+        }).then(response => response.json())
+          .then(data => {
+              if (data.success) {
+                  showAnimationThenReload(lottieAnimationSignup); // Show signup animation on success
+              } else {
+                  alert('Signup failed: ' + data.message);
+              }
+          }).catch(error => {
+              alert('Signup failed: ' + (error.message || 'Server error'));
+          });
     });
 });
+
 
 document.addEventListener("DOMContentLoaded", function () {
     checkLoginStatus();
