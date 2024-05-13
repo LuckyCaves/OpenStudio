@@ -22,7 +22,7 @@ router.get('/user-info', (req, res) => {
         return res.status(401).json({ success: false, message: 'User not authenticated' });
     }
 
-    const { name, email } = req.session.user;
+    let { name, email } = req.session.user;
     res.json({ success: true, name, email });
 });
 
@@ -69,6 +69,38 @@ router.post('/login', async (req, res) => {
     } catch (err) {
         res.status(500).json({ success: false, message: 'Server error' });  
     }
+});
+
+router.put('/update-user', async (req, res) => {
+    const { email, newEmail, newPassword } = req.body;
+
+    try {
+        const user = await User.findOne({ email });
+        if (!user) {
+            return res.status(404).json({ success: false, message: "User not found" });
+        }
+        // Update user's email and password
+        user.email = newEmail;
+        user.password = await bcrypt.hash(newPassword, 10);
+        await user.save();
+
+        res.json({ success: true, message: "User updated successfully" });
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({ success: false, message: "Server error", error: err.message });
+    }
+});
+
+router.delete('/delete-user', (req, res) => {
+    console.log(req.body.email);
+    User.findOneAndDelete({email: req.body.email}).then((doc) => {
+        res.status(201).send("Cuenta eliminada");
+    })
+    .catch((err) => {
+        console.log(err);
+        res.status(400).send("No se pudo eliminar la cuenta");
+    });
+
 });
 
 module.exports = router;

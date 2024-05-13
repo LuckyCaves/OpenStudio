@@ -1,4 +1,28 @@
-function createProductCard(productsContainer)
+let acc_name;
+
+function getUserInfo() {
+    return fetch('/user-info')
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                let temp_mail = data.email;
+                acc_name = data.name;
+                document.getElementById("Artist-Name").innerHTML = data.name;
+                document.getElementById("Artist-Email").innerHTML = temp_mail;
+                getProducts(acc_name);
+            } else {
+                console.error('Error obtaining the user data:', data.message);
+            }
+        })
+        .catch(error => {
+            console.log(response);
+            console.error('Error request:', error);
+        });
+}
+
+getUserInfo();
+
+function createProductCard(productsContainer, product)
 {
 
     let productCard = document.createElement('div');
@@ -42,6 +66,7 @@ function createProductCard(productsContainer)
         .catch(error => {
             console.error('Error en la solicitud:', error);
         });
+        window.location.href = '/';
     });
 
     productCard.appendChild(cardImage);
@@ -51,31 +76,6 @@ function createProductCard(productsContainer)
 
     productsContainer.appendChild(productCard);
 
-}
-
-function fillArtistInfo(artist)
-{
-
-    let artistName = document.getElementById('Artist-Name');
-    artistName.innerHTML = artist.artist;
-
-    let artistNationality = document.getElementById('Artist-Nationality');
-    artistNationality.innerHTML = artist.nationality;
-
-    let yearBorn = document.getElementById('Year-Born');
-    yearBorn.innerHTML = "b." + artist.year;
-
-    let artistDescription = document.getElementById('Description');
-    artistDescription.innerHTML = artist.description;
-
-    let artistFacebook = document.getElementById('facebook');
-    artistFacebook.href = artist.facebook;
-
-    let artistInstagram = document.getElementById('instagram');
-    artistInstagram.href = artist.instagram;
-
-    let artistPinterest = document.getElementById('pinterest');
-    artistPinterest.href = artist.pinterest;
 }
 
 function fillArtistPhoto(products)
@@ -97,33 +97,6 @@ function getRandomInt(max) {
     return Math.floor(Math.random() * max);
 }
 
-function getArtist(id)
-{
-    const xhr = new XMLHttpRequest();
-    xhr.open('GET', 'http://localhost:3000/artists/artistNumber', true);
-    
-    xhr.setRequestHeader('Content-Type', 'application/json');
-    xhr.setRequestHeader('value', id);
-
-    xhr.onload = function() {
-        if (xhr.status === 200) {
-            const response = JSON.parse(xhr.responseText);
-
-            fillArtistInfo(response[0]);
-            getProducts(response[0].artist);
-
-        } else {
-            console.error('Request failed. Status:', xhr.status);
-        }
-    };
-
-    xhr.onerror = function() {
-        console.error('Request error');
-    };
-
-    xhr.send();
-}
-
 function getProducts(artist)
 {
 
@@ -137,9 +110,9 @@ function getProducts(artist)
         if (xhr.status === 200) {
             const response = JSON.parse(xhr.responseText);
             let productsContainer = document.getElementById('Artist-Product');
-            response.forEach(function(product) {
-                createProductCard(productsContainer, product);
-            });
+            console.log(response);
+            response.forEach((element) => createProductCard(productsContainer, element));
+            
             fillArtistPhoto(response);
 
         } else {
@@ -154,39 +127,6 @@ function getProducts(artist)
     xhr.send();
 }
 
-document.getElementById("dimiss-edits").addEventListener('click', function () {
-    window.location.href = '/profile';
-});
-
-let artistN = 1; //will be artN of the loged user once both databases are united
-
-document.getElementById("delete-profile").addEventListener('click', function () {
-    fetch(`/admin/artists/${artistN}`, {
-        method: 'DELETE',  
-        headers: {
-            "x-auth": "Hola"
-        }
-    })
-    .then(response => {
-        if (!response.ok) {
-            throw new Error('No se pudo eliminar el producto');
-        }
-        return response.text();
-    })
-    .then(data => {
-        console.log(data); // "Producto eliminado con éxito"
-    })
-    .catch(error => {
-        console.error('Error en la solicitud:', error);
-    });
-});
-
-document.getElementById("save-edits").addEventListener('click', function () {
-    
-});
-
-
 window.onload = function() {
     //get to, well, get the artist number of yourself
-    getArtist(localStorage.getItem('artist'));
 };
