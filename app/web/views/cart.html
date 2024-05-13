@@ -17,6 +17,8 @@
             crossorigin="anonymous"
         />
 
+        <!-- Controladores -->
+        <script src="../web/controllers/cart.js"></script>
         <script src="https://js.stripe.com/v3/"></script>
 
         <!-- Stylsheets-->
@@ -50,54 +52,7 @@
                             </tr>
                         </thead>
                         <tbody id="cartItems">
-                            <!-- Product 1 -->
-                            <tr>
-                                <td><img src="../images/image1.png" alt="Product 1" class="img"></td>
-                                <td class="top-aligned">
-                                    <div class = "product-info">
-                                    <h4>Joan Mitchell</h4> <h5>City Landscape</h5>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="input-group quantity-control">
-                                        <button class="btn btn-outline-secondary" type="button">-</button>
-                                        <input type="text" class="form-control" value="2">
-                                        <button class="btn btn-outline-secondary" type="button">+</button>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="price">$850</div>
-                                </td>
-                                <td>
-                                    <button class="btn btn-danger">
-                                        <i class="fas fa-times"></i>
-                                    </button>
-                                </td>
-                            </tr>
-                             <!-- Product 2 -->
-                             <tr>
-                                <td><img src="../images/image2.png" alt="Product 1" class="img"></td>
-                                <td class="top-aligned">
-                                    <div class = "product-info">
-                                    <h4>Willem de Kooning</h4> <h5>Untitled IV</h5>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="input-group quantity-control">
-                                        <button class="btn btn-outline-secondary" type="button">-</button>
-                                        <input type="text" class="form-control" value="1">
-                                        <button class="btn btn-outline-secondary" type="button">+</button>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="price">$750</div>
-                                </td>
-                                <td>
-                                    <button class="btn btn-danger">
-                                        <i class="fas fa-times"></i>
-                                    </button>
-                                </td>
-                            </tr>
+                           
                         </tbody>
                     </table>
                 </div>

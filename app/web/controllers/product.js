@@ -34,7 +34,21 @@ function fillInfo(product)
 
     getArtistId(product.artist);
 
+    let purchaseButton = document.getElementById('Purchase-btn');
+    purchaseButton.addEventListener('click', function(e) {
+        e.preventDefault();
+        addToCart(product);
+    });
+
 }
+
+function addToCart(product) {
+    let cart = JSON.parse(sessionStorage.getItem('cartItems')) || [];
+    cart.push(product);
+    sessionStorage.setItem('cartItems', JSON.stringify(cart));
+    alert('Product added to cart!');
+}
+
 
 function getProduct(sku)
 {
@@ -92,3 +106,4 @@ function getArtistId(artist)
 window.onload = function() {
     getProduct(localStorage.getItem('product'));
 }
+
